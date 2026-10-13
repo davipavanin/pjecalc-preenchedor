@@ -1,0 +1,144 @@
+{
+  "url": "/pjecalc/pages/calculo/irpf.jsf",
+  "titulo": "",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:apurarImpostoRenda",
+      "nome": "formulario:apurarImpostoRenda",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Apurar Imposto de Renda",
+      "valor": "on",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:incidirSobreJurosDeMora",
+      "nome": "formulario:incidirSobreJurosDeMora",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Incidir sobre Juros de Mora",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:cobrarDoReclamado",
+      "nome": "formulario:cobrarDoReclamado",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Cobrar do Reclamado",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:considerarTributacaoExclusiva",
+      "nome": "formulario:considerarTributacaoExclusiva",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Tributação Exclusiva",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:considerarTributacaoEmSeparado",
+      "nome": "formulario:considerarTributacaoEmSeparado",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Tributação em Separado",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:regimeDeCaixa",
+      "nome": "formulario:regimeDeCaixa",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Aplicar Regime de Caixa",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:deduzirContribuicaoSocialDevidaPeloReclamante",
+      "nome": "formulario:deduzirContribuicaoSocialDevidaPeloReclamante",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Contribuição Social devida pelo Reclamante",
+      "valor": "on",
+      "marcado": true
+    },
+    {
+      "id": "formulario:deduzirPrevidenciaPrivada",
+      "nome": "formulario:deduzirPrevidenciaPrivada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Previdência Privada",
+      "valor": "on",
+      "marcado": true
+    },
+    {
+      "id": "formulario:deduzirPensaoAlimenticia",
+      "nome": "formulario:deduzirPensaoAlimenticia",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Pensão Alimentícia",
+      "valor": "on",
+      "marcado": true
+    },
+    {
+      "id": "formulario:deduzirHonorariosDevidosPeloReclamante",
+      "nome": "formulario:deduzirHonorariosDevidosPeloReclamante",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Honorários devidos pelo Reclamante",
+      "valor": "on",
+      "marcado": true
+    },
+    {
+      "id": "formulario:aposentadoMaiorQue65Anos",
+      "nome": "formulario:aposentadoMaiorQue65Anos",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Aposentado maior de 65 Anos",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:possuiDependentes",
+      "nome": "formulario:possuiDependentes",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Dependentes",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:quantidadeDependentes",
+      "nome": "formulario:quantidadeDependentes",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "",
+      "maxlength": 3
+    },
+    {
+      "id": "formulario:salvar",
+      "nome": "formulario:salvar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id128','return','', {timing:'immediate'}, fun",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:salvar",
+      "texto": "Salvar"
+    }
+  ],
+  "menu": "Imposto de Renda"
+}

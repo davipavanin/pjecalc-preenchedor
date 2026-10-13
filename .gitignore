@@ -1,0 +1,14 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+node_modules/
+__pycache__/
+dist/
+build/
+coverage/
+*.log
+
+ambiente/
+node_modules/
+entrega/

@@ -1,0 +1,214 @@
+[
+  {
+    "id": "formulario:j_id82:0:j_id84:0:selecionada",
+    "nome": "13º SALÁRIO"
+  },
+  {
+    "id": "formulario:j_id82:0:j_id84:1:selecionada",
+    "nome": "FÉRIAS + 1/3"
+  },
+  {
+    "id": "formulario:j_id82:0:j_id84:2:selecionada",
+    "nome": "VALE TRANSPORTE"
+  },
+  {
+    "id": "formulario:j_id82:1:j_id84:0:selecionada",
+    "nome": "ABONO PECUNIÁRIO"
+  },
+  {
+    "id": "formulario:j_id82:1:j_id84:1:selecionada",
+    "nome": "GORJETA"
+  },
+  {
+    "id": "formulario:j_id82:1:j_id84:2:selecionada",
+    "nome": "VALOR PAGO - NÃO TRIBUTÁVEL"
+  },
+  {
+    "id": "formulario:j_id82:2:j_id84:0:selecionada",
+    "nome": "ACORDO (MERA LIBERALIDADE)"
+  },
+  {
+    "id": "formulario:j_id82:2:j_id84:1:selecionada",
+    "nome": "GRATIFICAÇÃO DE FUNÇÃO"
+  },
+  {
+    "id": "formulario:j_id82:2:j_id84:2:selecionada",
+    "nome": "VALOR PAGO - TRIBUTÁVEL"
+  },
+  {
+    "id": "formulario:j_id82:3:j_id84:0:selecionada",
+    "nome": "ACORDO (MULTA)"
+  },
+  {
+    "id": "formulario:j_id82:3:j_id84:1:selecionada",
+    "nome": "GRATIFICAÇÃO POR TEMPO DE SERVIÇO"
+  },
+  {
+    "id": "formulario:j_id82:4:j_id84:0:selecionada",
+    "nome": "ACORDO (VERBAS INDENIZATÓRIAS)"
+  },
+  {
+    "id": "formulario:j_id82:4:j_id84:1:selecionada",
+    "nome": "HORAS EXTRAS 100%"
+  },
+  {
+    "id": "formulario:j_id82:5:j_id84:0:selecionada",
+    "nome": "ACORDO (VERBAS REMUNERATÓRIAS)"
+  },
+  {
+    "id": "formulario:j_id82:5:j_id84:1:selecionada",
+    "nome": "HORAS EXTRAS 50%"
+  },
+  {
+    "id": "formulario:j_id82:6:j_id84:0:selecionada",
+    "nome": "ADICIONAL DE HORAS EXTRAS 50%"
+  },
+  {
+    "id": "formulario:j_id82:6:j_id84:1:selecionada",
+    "nome": "HORAS IN ITINERE"
+  },
+  {
+    "id": "formulario:j_id82:7:j_id84:0:selecionada",
+    "nome": "ADICIONAL DE INSALUBRIDADE 10%"
+  },
+  {
+    "id": "formulario:j_id82:7:j_id84:1:selecionada",
+    "nome": "INDENIZAÇÃO ADICIONAL"
+  },
+  {
+    "id": "formulario:j_id82:8:j_id84:0:selecionada",
+    "nome": "ADICIONAL DE INSALUBRIDADE 20%"
+  },
+  {
+    "id": "formulario:j_id82:8:j_id84:1:selecionada",
+    "nome": "INDENIZAÇÃO PIS - ABONO SALARIAL"
+  },
+  {
+    "id": "formulario:j_id82:9:j_id84:0:selecionada",
+    "nome": "ADICIONAL DE INSALUBRIDADE 40%"
+  },
+  {
+    "id": "formulario:j_id82:9:j_id84:1:selecionada",
+    "nome": "INDENIZAÇÃO POR DANO ESTÉTICO"
+  },
+  {
+    "id": "formulario:j_id82:10:j_id84:0:selecionada",
+    "nome": "ADICIONAL DE PERICULOSIDADE 30%"
+  },
+  {
+    "id": "formulario:j_id82:10:j_id84:1:selecionada",
+    "nome": "INDENIZAÇÃO POR DANO MATERIAL"
+  },
+  {
+    "id": "formulario:j_id82:11:j_id84:0:selecionada",
+    "nome": "ADICIONAL DE PRODUTIVIDADE 30%"
+  },
+  {
+    "id": "formulario:j_id82:11:j_id84:1:selecionada",
+    "nome": "INDENIZAÇÃO POR DANO MORAL"
+  },
+  {
+    "id": "formulario:j_id82:12:j_id84:0:selecionada",
+    "nome": "ADICIONAL DE RISCO 40%"
+  },
+  {
+    "id": "formulario:j_id82:12:j_id84:1:selecionada",
+    "nome": "INTERVALO INTERJORNADAS"
+  },
+  {
+    "id": "formulario:j_id82:13:j_id84:0:selecionada",
+    "nome": "ADICIONAL DE SOBREAVISO"
+  },
+  {
+    "id": "formulario:j_id82:13:j_id84:1:selecionada",
+    "nome": "INTERVALO INTRAJORNADA"
+  },
+  {
+    "id": "formulario:j_id82:14:j_id84:0:selecionada",
+    "nome": "ADICIONAL DE TRANSFERÊNCIA 25%"
+  },
+  {
+    "id": "formulario:j_id82:14:j_id84:1:selecionada",
+    "nome": "MULTA CONVENCIONAL"
+  },
+  {
+    "id": "formulario:j_id82:15:j_id84:0:selecionada",
+    "nome": "ADICIONAL NOTURNO 20%"
+  },
+  {
+    "id": "formulario:j_id82:15:j_id84:1:selecionada",
+    "nome": "MULTA DO ARTIGO 477 DA CLT"
+  },
+  {
+    "id": "formulario:j_id82:16:j_id84:0:selecionada",
+    "nome": "AJUDA DE CUSTO"
+  },
+  {
+    "id": "formulario:j_id82:16:j_id84:1:selecionada",
+    "nome": "PARTICIPAÇÃO NOS LUCROS OU RESULTADOS - PLR"
+  },
+  {
+    "id": "formulario:j_id82:17:j_id84:0:selecionada",
+    "nome": "AVISO PRÉVIO"
+  },
+  {
+    "id": "formulario:j_id82:17:j_id84:1:selecionada",
+    "nome": "PRÊMIO PRODUÇÃO"
+  },
+  {
+    "id": "formulario:j_id82:18:j_id84:0:selecionada",
+    "nome": "CESTA BÁSICA"
+  },
+  {
+    "id": "formulario:j_id82:18:j_id84:1:selecionada",
+    "nome": "REPOUSO SEMANAL REMUNERADO"
+  },
+  {
+    "id": "formulario:j_id82:19:j_id84:0:selecionada",
+    "nome": "COMISSÃO"
+  },
+  {
+    "id": "formulario:j_id82:19:j_id84:1:selecionada",
+    "nome": "RESTITUIÇÃO / INDENIZAÇÃO DE DESPESA"
+  },
+  {
+    "id": "formulario:j_id82:20:j_id84:0:selecionada",
+    "nome": "DEVOLUÇÃO DE DESCONTOS INDEVIDOS"
+  },
+  {
+    "id": "formulario:j_id82:20:j_id84:1:selecionada",
+    "nome": "SALDO DE EMPREITADA"
+  },
+  {
+    "id": "formulario:j_id82:21:j_id84:0:selecionada",
+    "nome": "DIFERENÇA SALARIAL"
+  },
+  {
+    "id": "formulario:j_id82:21:j_id84:1:selecionada",
+    "nome": "SALDO DE SALÁRIO"
+  },
+  {
+    "id": "formulario:j_id82:22:j_id84:0:selecionada",
+    "nome": "DIÁRIAS - INTEGRAÇÃO AO SALÁRIO"
+  },
+  {
+    "id": "formulario:j_id82:22:j_id84:1:selecionada",
+    "nome": "SALÁRIO MATERNIDADE"
+  },
+  {
+    "id": "formulario:j_id82:23:j_id84:0:selecionada",
+    "nome": "DIÁRIAS - PAGAMENTO"
+  },
+  {
+    "id": "formulario:j_id82:23:j_id84:1:selecionada",
+    "nome": "SALÁRIO RETIDO"
+  },
+  {
+    "id": "formulario:j_id82:24:j_id84:0:selecionada",
+    "nome": "FERIADO EM DOBRO"
+  },
+  {
+    "id": "formulario:j_id82:24:j_id84:1:selecionada",
+    "nome": "TÍQUETE-ALIMENTAÇÃO"
+  }
+]

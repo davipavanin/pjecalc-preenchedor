@@ -1,0 +1,68 @@
+{
+  "url": "/pjecalc/pages/calculo/verba/verba-calculo.jsf",
+  "titulo": "",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:incluir",
+      "nome": "formulario:incluir",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "",
+      "ajax": true
+    },
+    {
+      "id": "formulario:lancamentoExpresso",
+      "nome": "formulario:lancamentoExpresso",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "",
+      "ajax": true
+    },
+    {
+      "id": "formulario:regerarOcorrencias",
+      "nome": "formulario:regerarOcorrencias",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "",
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoRegeracao:0",
+      "nome": "formulario:tipoRegeracao",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Manter alterações realizadas nas ocorrências",
+      "valor": "true",
+      "marcado": true
+    },
+    {
+      "id": "formulario:tipoRegeracao:1",
+      "nome": "formulario:tipoRegeracao",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Sobrescrever alterações realizadas nas ocorrências",
+      "valor": "false",
+      "marcado": false
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:incluir",
+      "texto": "Manual"
+    },
+    {
+      "id": "formulario:lancamentoExpresso",
+      "texto": "Expresso"
+    },
+    {
+      "id": "formulario:regerarOcorrencias",
+      "texto": "Regerar"
+    }
+  ],
+  "menu": "Verbas"
+}

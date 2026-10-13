@@ -1,0 +1,61 @@
+{
+  "url": "/pjecalc/pages/calculo/previdencia-privada.jsf",
+  "titulo": "",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:apurarPrevidenciaPrivada",
+      "nome": "formulario:apurarPrevidenciaPrivada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Apurar Previdência Privada",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:dataInicioPeriodoInputDate",
+      "nome": "formulario:dataInicioPeriodoInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Competência Inicial *"
+    },
+    {
+      "id": "formulario:dataTerminoPeriodoInputDate",
+      "nome": "formulario:dataTerminoPeriodoInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Competência Final *"
+    },
+    {
+      "id": "formulario:aliquota",
+      "nome": "formulario:aliquota",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Alíquota (%) *"
+    },
+    {
+      "id": "formulario:salvar",
+      "nome": "formulario:salvar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id129','return','', {timing:'immediate'}, fun",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:cmdIncluirAliquota",
+      "texto": "Adicionar Nova Alíquota"
+    },
+    {
+      "id": "formulario:salvar",
+      "texto": "Salvar"
+    }
+  ],
+  "menu": "Previdência Privada"
+}

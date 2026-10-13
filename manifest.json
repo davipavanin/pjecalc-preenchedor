@@ -1,0 +1,80 @@
+{
+  "$schema": "https://raw.githubusercontent.com/modelcontextprotocol/mcpb/main/dist/mcpb-manifest-v0.3.schema.json",
+  "manifest_version": "0.3",
+  "name": "pje-calc-preenchedor",
+  "display_name": "PJe-Calc Preenchedor",
+  "version": "0.1.0",
+  "description": "Preenche o PJe-Calc Cidadão instalado no computador a partir de uma ficha revisada pelo advogado, liquida e salva o PDF e o .PJC oficiais.",
+  "long_description": "A IA monta a ficha do cálculo a partir da sentença, o advogado revisa e aprova, e a extensão digita no PJe-Calc oficial pelo Microsoft Edge, como uma pessoa faria. Quem calcula é sempre o PJe-Calc. Testado na versão 2.16.0. Requer o PJe-Calc aberto.",
+  "author": {
+    "name": "Davi Pavanin"
+  },
+  "license": "MIT",
+  "keywords": [
+    "pje-calc",
+    "justiça do trabalho",
+    "cálculo trabalhista"
+  ],
+  "server": {
+    "type": "node",
+    "entry_point": "servidor/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/servidor/index.js"
+      ],
+      "env": {
+        "PJECALC_SAIDA": "${user_config.pasta_saida}",
+        "PJECALC_VISIVEL": "${user_config.mostrar_navegador}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "verificar_pjecalc",
+      "description": "Confere se o PJe-Calc está aberto e na versão testada."
+    },
+    {
+      "name": "conferir_ficha",
+      "description": "Valida a ficha do cálculo e devolve o resumo para o advogado revisar."
+    },
+    {
+      "name": "preencher_calculo",
+      "description": "Preenche, liquida e salva PDF e .PJC (só após aprovação do advogado)."
+    },
+    {
+      "name": "liquidar_e_exportar",
+      "description": "Liquida e exporta um cálculo completado à mão no PJe-Calc."
+    }
+  ],
+  "user_config": {
+    "pasta_saida": {
+      "type": "directory",
+      "title": "Pasta dos cálculos",
+      "description": "Onde salvar o PDF e o .PJC de cada cálculo.",
+      "default": "${DOCUMENTS}/PJe-Calc Preenchedor",
+      "required": false
+    },
+    "mostrar_navegador": {
+      "type": "boolean",
+      "title": "Mostrar o navegador enquanto preenche",
+      "description": "Abre uma janela do Edge para acompanhar o preenchimento. Mais lento; útil para conferir.",
+      "default": false,
+      "required": false
+    }
+  },
+  "compatibility": {
+    "platforms": [
+      "win32"
+    ],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davipavanin/pjecalc-preenchedor"
+  },
+  "homepage": "https://github.com/davipavanin/pjecalc-preenchedor",
+  "support": "https://github.com/davipavanin/pjecalc-preenchedor/issues"
+}

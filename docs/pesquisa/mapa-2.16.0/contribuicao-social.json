@@ -1,0 +1,185 @@
+{
+  "url": "/pjecalc/pages/calculo/inss/inss.jsf",
+  "titulo": "",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:apurarInssSeguradoDevido",
+      "nome": "formulario:apurarInssSeguradoDevido",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Apurar Segurado",
+      "valor": "on",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:cobrarDoReclamanteDevido",
+      "nome": "formulario:cobrarDoReclamanteDevido",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Cobrar do Reclamante",
+      "valor": "on",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:corrigirDescontoReclamante",
+      "nome": "formulario:corrigirDescontoReclamante",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Com Correção Trabalhista",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:apurarSalariosPagos",
+      "nome": "formulario:apurarSalariosPagos",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Apurar",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:aliquotaEmpregado:0",
+      "nome": "formulario:aliquotaEmpregado",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Segurado Empregado",
+      "valor": "SEGURADO_EMPREGADO",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:aliquotaEmpregado:1",
+      "nome": "formulario:aliquotaEmpregado",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Empregado Doméstico",
+      "valor": "EMPREGADO_DOMESTICO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:aliquotaEmpregado:2",
+      "nome": "formulario:aliquotaEmpregado",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Fixa",
+      "valor": "FIXA",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:aliquotaEmpregador:0",
+      "nome": "formulario:aliquotaEmpregador",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Por Atividade Econômica",
+      "valor": "POR_ATIVIDADE_ECONOMICA",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:aliquotaEmpregador:1",
+      "nome": "formulario:aliquotaEmpregador",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Por Período",
+      "valor": "POR_PERIODO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:aliquotaEmpregador:2",
+      "nome": "formulario:aliquotaEmpregador",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Fixa",
+      "valor": "FIXA",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:aliquotaEmpresaFixa",
+      "nome": "formulario:aliquotaEmpresaFixa",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Empresa (%)"
+    },
+    {
+      "id": "formulario:aliquotaRatFixa",
+      "nome": "formulario:aliquotaRatFixa",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "SAT (%)"
+    },
+    {
+      "id": "formulario:aliquotaTerceirosFixa",
+      "nome": "formulario:aliquotaTerceirosFixa",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Terceiros (%)"
+    },
+    {
+      "id": "formulario:periodoInicialDEVIDOSInputDate",
+      "nome": "formulario:periodoInicialDEVIDOSInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Data Inicial *"
+    },
+    {
+      "id": "formulario:periodoFinalDEVIDOSInputDate",
+      "nome": "formulario:periodoFinalDEVIDOSInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Data Final *"
+    },
+    {
+      "id": "formulario:periodoInicialPAGOSInputDate",
+      "nome": "formulario:periodoInicialPAGOSInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Data Inicial *"
+    },
+    {
+      "id": "formulario:periodoFinalPAGOSInputDate",
+      "nome": "formulario:periodoFinalPAGOSInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Data Final *"
+    },
+    {
+      "id": "formulario:salvar",
+      "nome": "formulario:salvar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id295','return','', {timing:'immediate'}, fun",
+      "ajax": true
+    },
+    {
+      "id": "formulario:ocorrencias",
+      "nome": "formulario:ocorrencias",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id295','return','', {timing:'immediate'}, fun",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:salvar",
+      "texto": "Salvar"
+    },
+    {
+      "id": "formulario:ocorrencias",
+      "texto": "Ocorrências"
+    }
+  ],
+  "menu": "Contribuição Social"
+}

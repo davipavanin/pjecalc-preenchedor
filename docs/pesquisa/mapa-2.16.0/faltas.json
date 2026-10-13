@@ -1,0 +1,76 @@
+{
+  "url": "/pjecalc/pages/calculo/falta.jsf",
+  "titulo": "",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:dataInicioPeriodoFaltaInputDate",
+      "nome": "formulario:dataInicioPeriodoFaltaInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Data Inicial *"
+    },
+    {
+      "id": "formulario:dataTerminoPeriodoFaltaInputDate",
+      "nome": "formulario:dataTerminoPeriodoFaltaInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Data Final *"
+    },
+    {
+      "id": "formulario:faltaJustificada",
+      "nome": "formulario:faltaJustificada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Falta Justificada",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:reiniciaFerias",
+      "nome": "formulario:reiniciaFerias",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Reiniciar Período Aquisitivo",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:justificativaDaFalta",
+      "nome": "formulario:justificativaDaFalta",
+      "tag": "textarea",
+      "tipo": "textarea",
+      "rotulo": "Descrição"
+    },
+    {
+      "id": "formulario:arquivo:file",
+      "nome": "formulario:arquivo:file",
+      "tag": "input",
+      "tipo": "file",
+      "rotulo": ""
+    },
+    {
+      "id": "formulario:confirmarImportacao",
+      "nome": "formulario:confirmarImportacao",
+      "tag": "input",
+      "tipo": "submit",
+      "rotulo": ""
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:cmdIncluirFalta",
+      "texto": "Salvar Nova Falta"
+    },
+    {
+      "id": "formulario:confirmarImportacao",
+      "texto": "Confirmar"
+    }
+  ],
+  "menu": "Faltas"
+}

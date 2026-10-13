@@ -1,0 +1,33 @@
+{
+  "url": "/pjecalc/pages/calculo/exportacao.jsf",
+  "titulo": "",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:nomeArquivo",
+      "nome": "formulario:nomeArquivo",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Nome do Arquivo"
+    },
+    {
+      "id": "formulario:exportar",
+      "nome": "formulario:exportar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id94','return','', {timing:'immediate'}, func",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:exportar",
+      "texto": "Exportar"
+    }
+  ],
+  "menu": "Exportar"
+}

@@ -1,0 +1,468 @@
+{
+  "url": "/pjecalc/pages/calculo/calculo.jsf",
+  "titulo": "",
+  "abas": [
+    "Dados do Processo",
+    "Parâmetros do Cálculo"
+  ],
+  "campos": [
+    {
+      "id": "formulario:idCalculo",
+      "nome": "formulario:idCalculo",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Número *"
+    },
+    {
+      "id": "formulario:tipo",
+      "nome": "formulario:tipo",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Tipo *",
+      "maxlength": 1
+    },
+    {
+      "id": "formulario:dataCriacao",
+      "nome": "formulario:dataCriacao",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Data de Criação *",
+      "maxlength": 1
+    },
+    {
+      "id": "formulario:estado",
+      "nome": "formulario:estado",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Estado *",
+      "opcoes": [
+        [
+          "org.jboss.seam.ui.NoSelectionConverter.noSelectionValue",
+          ""
+        ],
+        [
+          "0",
+          "AC"
+        ],
+        [
+          "1",
+          "AL"
+        ],
+        [
+          "2",
+          "AP"
+        ],
+        [
+          "3",
+          "AM"
+        ],
+        [
+          "4",
+          "BA"
+        ],
+        [
+          "5",
+          "CE"
+        ],
+        [
+          "6",
+          "DF"
+        ],
+        [
+          "7",
+          "ES"
+        ],
+        [
+          "8",
+          "GO"
+        ],
+        [
+          "9",
+          "MA"
+        ],
+        [
+          "10",
+          "MT"
+        ],
+        [
+          "11",
+          "MS"
+        ],
+        [
+          "12",
+          "MG"
+        ],
+        [
+          "13",
+          "PA"
+        ],
+        [
+          "14",
+          "PB"
+        ],
+        [
+          "15",
+          "PR"
+        ],
+        [
+          "16",
+          "PE"
+        ],
+        [
+          "17",
+          "PI"
+        ],
+        [
+          "18",
+          "RJ"
+        ],
+        [
+          "19",
+          "RN"
+        ],
+        [
+          "20",
+          "RS"
+        ],
+        [
+          "21",
+          "RO"
+        ],
+        [
+          "22",
+          "RR"
+        ],
+        [
+          "23",
+          "SC"
+        ],
+        [
+          "24",
+          "SP"
+        ],
+        [
+          "25",
+          "SE"
+        ],
+        [
+          "26",
+          "TO"
+        ]
+      ],
+      "ajax": true
+    },
+    {
+      "id": "formulario:municipio",
+      "nome": "formulario:municipio",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Município *",
+      "opcoes": [
+        [
+          "org.jboss.seam.ui.NoSelectionConverter.noSelectionValue",
+          ""
+        ]
+      ],
+      "ajax": true
+    },
+    {
+      "id": "formulario:dataAdmissaoInputDate",
+      "nome": "formulario:dataAdmissaoInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Admissão *"
+    },
+    {
+      "id": "formulario:dataDemissaoInputDate",
+      "nome": "formulario:dataDemissaoInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Demissão",
+      "ajax": true
+    },
+    {
+      "id": "formulario:dataAjuizamentoInputDate",
+      "nome": "formulario:dataAjuizamentoInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Ajuizamento *"
+    },
+    {
+      "id": "formulario:dataInicioCalculoInputDate",
+      "nome": "formulario:dataInicioCalculoInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Data Inicial",
+      "ajax": true
+    },
+    {
+      "id": "formulario:dataTerminoCalculoInputDate",
+      "nome": "formulario:dataTerminoCalculoInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Data Final"
+    },
+    {
+      "id": "formulario:prescricaoQuinquenal",
+      "nome": "formulario:prescricaoQuinquenal",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Aplicar Prescrição",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:prescricaoFgts",
+      "nome": "formulario:prescricaoFgts",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Aplicar Prescrição Verbas (Quinquenal) FGTS",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDaBaseTabelada",
+      "nome": "formulario:tipoDaBaseTabelada",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Regime de Trabalho",
+      "opcoes": [
+        [
+          "INTERMITENTE",
+          "Trabalho Intermitente"
+        ],
+        [
+          "INTEGRAL",
+          "Tempo Integral"
+        ],
+        [
+          "PARCIAL",
+          "Tempo Parcial"
+        ]
+      ]
+    },
+    {
+      "id": "formulario:valorMaiorRemuneracao",
+      "nome": "formulario:valorMaiorRemuneracao",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Maior Remuneração",
+      "maxlength": 16
+    },
+    {
+      "id": "formulario:valorUltimaRemuneracao",
+      "nome": "formulario:valorUltimaRemuneracao",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Última Remuneração",
+      "maxlength": 16
+    },
+    {
+      "id": "formulario:apuracaoPrazoDoAvisoPrevio",
+      "nome": "formulario:apuracaoPrazoDoAvisoPrevio",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Prazo de Aviso Prévio",
+      "opcoes": [
+        [
+          "NAO_APURAR",
+          "Não apurar"
+        ],
+        [
+          "APURACAO_CALCULADA",
+          "Calculado"
+        ],
+        [
+          "APURACAO_INFORMADA",
+          "Informado"
+        ]
+      ],
+      "ajax": true
+    },
+    {
+      "id": "formulario:projetaAvisoIndenizado",
+      "nome": "formulario:projetaAvisoIndenizado",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Projetar Aviso Prévio Indenizado",
+      "valor": "on",
+      "marcado": true
+    },
+    {
+      "id": "formulario:limitarAvos",
+      "nome": "formulario:limitarAvos",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Limitar Avos ao Período do Cálculo",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:zeraValorNegativo",
+      "nome": "formulario:zeraValorNegativo",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Zerar Valor Negativo (Padrão)",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:consideraFeriadoEstadual",
+      "nome": "formulario:consideraFeriadoEstadual",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Considerar Feriados Estaduais",
+      "valor": "on",
+      "marcado": true
+    },
+    {
+      "id": "formulario:consideraFeriadoMunicipal",
+      "nome": "formulario:consideraFeriadoMunicipal",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Considerar Feriados Municipais",
+      "valor": "on",
+      "marcado": true
+    },
+    {
+      "id": "formulario:valorCargaHorariaPadrao",
+      "nome": "formulario:valorCargaHorariaPadrao",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Padrão *:",
+      "maxlength": 7
+    },
+    {
+      "id": "formulario:dataInicioExcecaoInputDate",
+      "nome": "formulario:dataInicioExcecaoInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Início"
+    },
+    {
+      "id": "formulario:dataTerminoExcecaoInputDate",
+      "nome": "formulario:dataTerminoExcecaoInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Fim"
+    },
+    {
+      "id": "formulario:valorCargaHoraria",
+      "nome": "formulario:valorCargaHoraria",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Exceção",
+      "maxlength": 6
+    },
+    {
+      "id": "formulario:sabadoDiaUtil",
+      "nome": "formulario:sabadoDiaUtil",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Sábado como Dia Útil",
+      "valor": "on",
+      "marcado": true
+    },
+    {
+      "id": "formulario:dataInicioExcecaoSabadoInputDate",
+      "nome": "formulario:dataInicioExcecaoSabadoInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Início"
+    },
+    {
+      "id": "formulario:dataTerminoExcecaoSabadoInputDate",
+      "nome": "formulario:dataTerminoExcecaoSabadoInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Fim"
+    },
+    {
+      "id": "formulario:pontoFacultativo",
+      "nome": "formulario:pontoFacultativo",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Ponto Facultativo",
+      "opcoes": [
+        [
+          "org.jboss.seam.ui.NoSelectionConverter.noSelectionValue",
+          ""
+        ],
+        [
+          "27",
+          "SEXTA-FEIRA SANTA"
+        ],
+        [
+          "28",
+          "CORPUS CHRISTI"
+        ],
+        [
+          "29",
+          "CARNAVAL"
+        ]
+      ]
+    },
+    {
+      "id": "formulario:comentarios",
+      "nome": "formulario:comentarios",
+      "tag": "textarea",
+      "tipo": "textarea",
+      "rotulo": "Comentários"
+    },
+    {
+      "id": "formulario:salvar",
+      "nome": "formulario:salvar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "function checarValor(dataMenor, tipo) {\n\t\t\t\t\tif (!(dataMenor && tipo)) {\n\t\t\t\t\t\tr",
+      "ajax": true
+    },
+    {
+      "id": "formulario:cancelar",
+      "nome": "formulario:cancelar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "function checarValor(dataMenor, tipo) {\n\t\t\t\t\tif (!(dataMenor && tipo)) {\n\t\t\t\t\t\tr",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:incluirExcecaoCH",
+      "texto": "Adicionar Base"
+    },
+    {
+      "id": "formulario:incluirExcecaoSab",
+      "texto": "Adicionar Base"
+    },
+    {
+      "id": "formulario:cmdAdicionarPontoFacultativo",
+      "texto": "Adicionar Ponto Facultativo"
+    },
+    {
+      "id": "formulario:listagemPontosFacultativos:0:excluirPontoFacultativo",
+      "texto": "Excluir"
+    },
+    {
+      "id": "formulario:listagemPontosFacultativos:1:excluirPontoFacultativo",
+      "texto": "Excluir"
+    },
+    {
+      "id": "formulario:listagemPontosFacultativos:2:excluirPontoFacultativo",
+      "texto": "Excluir"
+    },
+    {
+      "id": "formulario:salvar",
+      "texto": "Salvar"
+    },
+    {
+      "id": "formulario:cancelar",
+      "texto": "Cancelar"
+    }
+  ]
+}

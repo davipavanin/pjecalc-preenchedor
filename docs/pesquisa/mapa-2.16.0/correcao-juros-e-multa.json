@@ -1,0 +1,292 @@
+{
+  "url": "/pjecalc/pages/calculo/parametros-atualizacao/parametros-atualizacao.jsf",
+  "titulo": "",
+  "abas": [
+    "Dados Gerais",
+    "Dados Específicos"
+  ],
+  "campos": [
+    {
+      "id": "formulario:indiceTrabalhista",
+      "nome": "formulario:indiceTrabalhista",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Índice Trabalhista",
+      "opcoes": [
+        [
+          "TUACDT",
+          "Tabela Única de Atualização e Conversão de Débitos Trabalhistas"
+        ],
+        [
+          "TABELA_DEVEDOR_FAZENDA",
+          "Devedor Fazenda Pública"
+        ],
+        [
+          "TABELA_INDEBITO_TRIBUTARIO",
+          "Repetição de Indébito Tributário"
+        ],
+        [
+          "TABELA_UNICA_JT_MENSAL",
+          "Tabela JT Mensal"
+        ],
+        [
+          "TABELA_UNICA_JT_DIARIO",
+          "Tabela JT Diária"
+        ],
+        [
+          "TR",
+          "TR"
+        ],
+        [
+          "IGPM",
+          "IGP-M"
+        ],
+        [
+          "INPC",
+          "INPC"
+        ],
+        [
+          "IPC",
+          "IPC"
+        ],
+        [
+          "IPCA",
+          "IPCA"
+        ],
+        [
+          "IPCAE",
+          "IPCA-E"
+        ],
+        [
+          "IPCAETR",
+          "IPCA-E/TR"
+        ],
+        [
+          "SELIC",
+          "SELIC (Receita Federal)"
+        ],
+        [
+          "SELIC_FAZENDA",
+          "SELIC Simples"
+        ],
+        [
+          "SELIC_BACEN",
+          "SELIC Composta"
+        ],
+        [
+          "SEM_CORRECAO",
+          "Sem Correção"
+        ]
+      ],
+      "ajax": true
+    },
+    {
+      "id": "formulario:combinarOutroIndice",
+      "nome": "formulario:combinarOutroIndice",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Combinar com Outro Índice",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:ignorarTaxaNegativa",
+      "nome": "formulario:ignorarTaxaNegativa",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Ignorar Taxa Negativa para Índice(s) selecionado(s)",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:aplicarJurosFasePreJudicial",
+      "nome": "formulario:aplicarJurosFasePreJudicial",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Aplicar Juros na Fase Pré-Judicial",
+      "valor": "on",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:juros",
+      "nome": "formulario:juros",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Tabela de Juros",
+      "opcoes": [
+        [
+          "JUROS_PADRAO",
+          "Juros Padrão"
+        ],
+        [
+          "JUROS_POUPANCA",
+          "Juros Caderneta de Poupança"
+        ],
+        [
+          "FAZENDA_PUBLICA",
+          "Juros Fazenda Pública"
+        ],
+        [
+          "JUROS_MEIO_PORCENTO",
+          "Juros Simples 0,5% a.m."
+        ],
+        [
+          "JUROS_UM_PORCENTO",
+          "Juros Simples 1,0% a.m."
+        ],
+        [
+          "JUROS_ZERO_TRINTA_TRES",
+          "Juros Simples 0,0333333% a.d."
+        ],
+        [
+          "JUROS_DOIS_AA",
+          "Juros Simples 2,0% a.a. (0,1666666% a.m.)"
+        ],
+        [
+          "SELIC",
+          "SELIC (Receita Federal)"
+        ],
+        [
+          "SELIC_FAZENDA",
+          "SELIC Simples"
+        ],
+        [
+          "SELIC_BACEN",
+          "SELIC Composta"
+        ],
+        [
+          "TRD_SIMPLES",
+          "TRD Juros Simples"
+        ],
+        [
+          "TRD_COMPOSTOS",
+          "TRD Juros Compostos"
+        ],
+        [
+          "TAXA_LEGAL",
+          "Taxa Legal"
+        ],
+        [
+          "SEM_JUROS",
+          "Sem Juros"
+        ]
+      ],
+      "ajax": true
+    },
+    {
+      "id": "formulario:combinarOutroJuros",
+      "nome": "formulario:combinarOutroJuros",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Combinar com Outra Tabela de Juros",
+      "valor": "on",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:outroJuros",
+      "nome": "formulario:outroJuros",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Tabela Juros *",
+      "opcoes": [
+        [
+          "org.jboss.seam.ui.NoSelectionConverter.noSelectionValue",
+          ""
+        ],
+        [
+          "JUROS_PADRAO",
+          "Juros Padrão"
+        ],
+        [
+          "JUROS_POUPANCA",
+          "Juros Caderneta de Poupança"
+        ],
+        [
+          "FAZENDA_PUBLICA",
+          "Juros Fazenda Pública"
+        ],
+        [
+          "JUROS_MEIO_PORCENTO",
+          "Juros Simples 0,5% a.m."
+        ],
+        [
+          "JUROS_UM_PORCENTO",
+          "Juros Simples 1,0% a.m."
+        ],
+        [
+          "JUROS_ZERO_TRINTA_TRES",
+          "Juros Simples 0,0333333% a.d."
+        ],
+        [
+          "JUROS_DOIS_AA",
+          "Juros Simples 2,0% a.a. (0,1666666% a.m.)"
+        ],
+        [
+          "SELIC",
+          "SELIC (Receita Federal)"
+        ],
+        [
+          "SELIC_FAZENDA",
+          "SELIC Simples"
+        ],
+        [
+          "SELIC_BACEN",
+          "SELIC Composta"
+        ],
+        [
+          "TRD_SIMPLES",
+          "TRD Juros Simples"
+        ],
+        [
+          "TRD_COMPOSTOS",
+          "TRD Juros Compostos"
+        ],
+        [
+          "TAXA_LEGAL",
+          "Taxa Legal"
+        ],
+        [
+          "SEM_JUROS",
+          "Sem Juros"
+        ]
+      ]
+    },
+    {
+      "id": "formulario:apartirDeOutroJurosInputDate",
+      "nome": "formulario:apartirDeOutroJurosInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "A partir de *"
+    },
+    {
+      "id": "formulario:salvar",
+      "nome": "formulario:salvar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id365','return','', {timing:'immediate'}, fun",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:addOutroJuros",
+      "texto": "Adicionar"
+    },
+    {
+      "id": "formulario:j_id150:0:excluirDep",
+      "texto": "Excluir"
+    },
+    {
+      "id": "formulario:salvar",
+      "texto": "Salvar"
+    }
+  ],
+  "menu": "Correção, Juros e Multa"
+}

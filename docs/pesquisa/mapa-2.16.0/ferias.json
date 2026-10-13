@@ -1,0 +1,479 @@
+{
+  "url": "/pjecalc/pages/calculo/ferias.jsf",
+  "titulo": "",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:arquivo:file",
+      "nome": "formulario:arquivo:file",
+      "tag": "input",
+      "tipo": "file",
+      "rotulo": ""
+    },
+    {
+      "id": "formulario:j_id96",
+      "nome": "formulario:j_id96",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "",
+      "ajax": true
+    },
+    {
+      "id": "formulario:inicioFeriasColetivasInputDate",
+      "nome": "formulario:inicioFeriasColetivasInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Data de Início de Férias Coletivas no Primeiro Ano do Contrato Se houve férias c"
+    },
+    {
+      "id": "formulario:regerarFeriasColetivas",
+      "nome": "formulario:regerarFeriasColetivas",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "Regerar Períodos de Férias\nData de Início de Férias Coletivas no Primeiro Ano do",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:0:prazo",
+      "nome": "formulario:j_id106:0:prazo",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "",
+      "maxlength": 2
+    },
+    {
+      "id": "formulario:j_id106:0:situacao",
+      "nome": "formulario:j_id106:0:situacao",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "",
+      "opcoes": [
+        [
+          "GOZADAS",
+          "Gozadas"
+        ],
+        [
+          "GOZADAS_PARCIALMENTE",
+          "Gozadas Parcialmente"
+        ],
+        [
+          "INDENIZADAS",
+          "Indenizadas"
+        ],
+        [
+          "PERDIDAS",
+          "Perdidas"
+        ]
+      ],
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:0:dobraGeral",
+      "nome": "formulario:j_id106:0:dobraGeral",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id106:0:abono",
+      "nome": "formulario:j_id106:0:abono",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:0:quantidadeDiasAbono",
+      "nome": "formulario:j_id106:0:quantidadeDiasAbono",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "",
+      "maxlength": 2
+    },
+    {
+      "id": "formulario:j_id106:0:dataInicialDoPeriodoDeGozo1",
+      "nome": "formulario:j_id106:0:dataInicialDoPeriodoDeGozo1",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "a ",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:0:dataFinalDoPeriodoDeGozo1",
+      "nome": "formulario:j_id106:0:dataFinalDoPeriodoDeGozo1",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "a ",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:0:dobraDoPeriodoDeGozo1",
+      "nome": "formulario:j_id106:0:dobraDoPeriodoDeGozo1",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id106:0:dataInicialDoPeriodoDeGozo2",
+      "nome": "formulario:j_id106:0:dataInicialDoPeriodoDeGozo2",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "a ",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:0:dataFinalDoPeriodoDeGozo2",
+      "nome": "formulario:j_id106:0:dataFinalDoPeriodoDeGozo2",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "a ",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:0:dobraDoPeriodoDeGozo2",
+      "nome": "formulario:j_id106:0:dobraDoPeriodoDeGozo2",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id106:0:dataInicialDoPeriodoDeGozo3",
+      "nome": "formulario:j_id106:0:dataInicialDoPeriodoDeGozo3",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "a ",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:0:dataFinalDoPeriodoDeGozo3",
+      "nome": "formulario:j_id106:0:dataFinalDoPeriodoDeGozo3",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "a ",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:0:dobraDoPeriodoDeGozo3",
+      "nome": "formulario:j_id106:0:dobraDoPeriodoDeGozo3",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id106:1:prazo",
+      "nome": "formulario:j_id106:1:prazo",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "",
+      "maxlength": 2
+    },
+    {
+      "id": "formulario:j_id106:1:situacao",
+      "nome": "formulario:j_id106:1:situacao",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "",
+      "opcoes": [
+        [
+          "GOZADAS",
+          "Gozadas"
+        ],
+        [
+          "GOZADAS_PARCIALMENTE",
+          "Gozadas Parcialmente"
+        ],
+        [
+          "INDENIZADAS",
+          "Indenizadas"
+        ],
+        [
+          "PERDIDAS",
+          "Perdidas"
+        ]
+      ],
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:1:dobraGeral",
+      "nome": "formulario:j_id106:1:dobraGeral",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id106:1:abono",
+      "nome": "formulario:j_id106:1:abono",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:1:quantidadeDiasAbono",
+      "nome": "formulario:j_id106:1:quantidadeDiasAbono",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "",
+      "maxlength": 2
+    },
+    {
+      "id": "formulario:j_id106:1:dataInicialDoPeriodoDeGozo1",
+      "nome": "formulario:j_id106:1:dataInicialDoPeriodoDeGozo1",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "a ",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:1:dataFinalDoPeriodoDeGozo1",
+      "nome": "formulario:j_id106:1:dataFinalDoPeriodoDeGozo1",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "a ",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:1:dobraDoPeriodoDeGozo1",
+      "nome": "formulario:j_id106:1:dobraDoPeriodoDeGozo1",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id106:1:dataInicialDoPeriodoDeGozo2",
+      "nome": "formulario:j_id106:1:dataInicialDoPeriodoDeGozo2",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "a ",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:1:dataFinalDoPeriodoDeGozo2",
+      "nome": "formulario:j_id106:1:dataFinalDoPeriodoDeGozo2",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "a ",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:1:dobraDoPeriodoDeGozo2",
+      "nome": "formulario:j_id106:1:dobraDoPeriodoDeGozo2",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id106:1:dataInicialDoPeriodoDeGozo3",
+      "nome": "formulario:j_id106:1:dataInicialDoPeriodoDeGozo3",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "a ",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:1:dataFinalDoPeriodoDeGozo3",
+      "nome": "formulario:j_id106:1:dataFinalDoPeriodoDeGozo3",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "a ",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:1:dobraDoPeriodoDeGozo3",
+      "nome": "formulario:j_id106:1:dobraDoPeriodoDeGozo3",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id106:2:prazo",
+      "nome": "formulario:j_id106:2:prazo",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "",
+      "maxlength": 2
+    },
+    {
+      "id": "formulario:j_id106:2:situacao",
+      "nome": "formulario:j_id106:2:situacao",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "",
+      "opcoes": [
+        [
+          "GOZADAS",
+          "Gozadas"
+        ],
+        [
+          "GOZADAS_PARCIALMENTE",
+          "Gozadas Parcialmente"
+        ],
+        [
+          "INDENIZADAS",
+          "Indenizadas"
+        ],
+        [
+          "PERDIDAS",
+          "Perdidas"
+        ]
+      ],
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:2:dobraGeral",
+      "nome": "formulario:j_id106:2:dobraGeral",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id106:2:abono",
+      "nome": "formulario:j_id106:2:abono",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:2:quantidadeDiasAbono",
+      "nome": "formulario:j_id106:2:quantidadeDiasAbono",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "",
+      "maxlength": 2
+    },
+    {
+      "id": "formulario:j_id106:2:dataInicialDoPeriodoDeGozo1",
+      "nome": "formulario:j_id106:2:dataInicialDoPeriodoDeGozo1",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "a ",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:2:dataFinalDoPeriodoDeGozo1",
+      "nome": "formulario:j_id106:2:dataFinalDoPeriodoDeGozo1",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "a ",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:2:dobraDoPeriodoDeGozo1",
+      "nome": "formulario:j_id106:2:dobraDoPeriodoDeGozo1",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id106:2:dataInicialDoPeriodoDeGozo2",
+      "nome": "formulario:j_id106:2:dataInicialDoPeriodoDeGozo2",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "a ",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:2:dataFinalDoPeriodoDeGozo2",
+      "nome": "formulario:j_id106:2:dataFinalDoPeriodoDeGozo2",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "a ",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:2:dobraDoPeriodoDeGozo2",
+      "nome": "formulario:j_id106:2:dobraDoPeriodoDeGozo2",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id106:2:dataInicialDoPeriodoDeGozo3",
+      "nome": "formulario:j_id106:2:dataInicialDoPeriodoDeGozo3",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "a ",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:2:dataFinalDoPeriodoDeGozo3",
+      "nome": "formulario:j_id106:2:dataFinalDoPeriodoDeGozo3",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "a ",
+      "ajax": true
+    },
+    {
+      "id": "formulario:j_id106:2:dobraDoPeriodoDeGozo3",
+      "nome": "formulario:j_id106:2:dobraDoPeriodoDeGozo3",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:prazoFeriasProporcionais",
+      "nome": "formulario:prazoFeriasProporcionais",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Prazo das Férias Proporcionais",
+      "maxlength": 3
+    },
+    {
+      "id": "",
+      "nome": "formulario:j_id215",
+      "tag": "input",
+      "tipo": "submit",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id214','return','', {timing:'immediate'}, fun"
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:j_id96",
+      "texto": "Confirmar"
+    },
+    {
+      "id": "formulario:regerarFeriasColetivas",
+      "texto": "Regerar Férias"
+    },
+    {
+      "id": "",
+      "texto": "Salvar"
+    }
+  ],
+  "menu": "Férias"
+}

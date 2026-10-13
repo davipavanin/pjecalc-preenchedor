@@ -1,0 +1,259 @@
+{
+  "url": "/pjecalc/pages/calculo/fgts.jsf",
+  "titulo": "",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:tipoDeVerba:0",
+      "nome": "formulario:tipoDeVerba",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Pagar",
+      "valor": "PAGAR",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDeVerba:1",
+      "nome": "formulario:tipoDeVerba",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Recolher",
+      "valor": "DEPOSITAR",
+      "marcado": true
+    },
+    {
+      "id": "formulario:comporPrincipal:0",
+      "nome": "formulario:comporPrincipal",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Sim",
+      "valor": "SIM",
+      "marcado": true
+    },
+    {
+      "id": "formulario:comporPrincipal:1",
+      "nome": "formulario:comporPrincipal",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Não",
+      "valor": "NAO",
+      "marcado": false
+    },
+    {
+      "id": "formulario:multa",
+      "nome": "formulario:multa",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDoValorDaMulta:0",
+      "nome": "formulario:tipoDoValorDaMulta",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Calculado",
+      "valor": "CALCULADA",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDoValorDaMulta:1",
+      "nome": "formulario:tipoDoValorDaMulta",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Informado",
+      "valor": "INFORMADA",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:multaDoFgts:0",
+      "nome": "formulario:multaDoFgts",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "20%",
+      "valor": "VINTE_POR_CENTO",
+      "marcado": false
+    },
+    {
+      "id": "formulario:multaDoFgts:1",
+      "nome": "formulario:multaDoFgts",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "40%",
+      "valor": "QUARENTA_POR_CENTO",
+      "marcado": true
+    },
+    {
+      "id": "formulario:incidenciaDoFgts",
+      "nome": "formulario:incidenciaDoFgts",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Incidência",
+      "opcoes": [
+        [
+          "SOBRE_O_TOTAL_DEVIDO",
+          "Sobre devido"
+        ],
+        [
+          "SOBRE_DEPOSITADO_SACADO",
+          "Sobre saldo e/ou saque"
+        ],
+        [
+          "SOBRE_DIFERENCA",
+          "Sobre diferença"
+        ],
+        [
+          "SOBRE_TOTAL_DEVIDO_MAIS_SAQUE_E_OU_SALDO",
+          "Sobre devido + saldo e/ou saque"
+        ],
+        [
+          "SOBRE_TOTAL_DEVIDO_MENOS_SAQUE_E_OU_SALDO",
+          "Sobre devido - saldo e/ou saque"
+        ]
+      ],
+      "ajax": true
+    },
+    {
+      "id": "formulario:excluirAvisoDaMulta",
+      "nome": "formulario:excluirAvisoDaMulta",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Excluir da Base da Multa o valor de FGTS sobre Aviso Prévio",
+      "valor": "on",
+      "marcado": true
+    },
+    {
+      "id": "formulario:multaDoArtigo467",
+      "nome": "formulario:multaDoArtigo467",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Multa do artigo 467 da CLT",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:multa10",
+      "nome": "formulario:multa10",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Contribuição Social 10%",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:contribuiçãoSocial",
+      "nome": "formulario:contribuiçãoSocial",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Contribuição Social 0,5%",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:incidenciaPensaoAlimenticia",
+      "nome": "formulario:incidenciaPensaoAlimenticia",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Pensão Alimentícia sobre FGTS",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:periodoInicial",
+      "nome": "formulario:periodoInicial",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Data Inicial"
+    },
+    {
+      "id": "formulario:periodoFinal",
+      "nome": "formulario:periodoFinal",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Data Final"
+    },
+    {
+      "id": "formulario:aliquota:0",
+      "nome": "formulario:aliquota",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "2%",
+      "valor": "DOIS_POR_CENTO",
+      "marcado": false
+    },
+    {
+      "id": "formulario:aliquota:1",
+      "nome": "formulario:aliquota",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "8%",
+      "valor": "OITO_POR_CENTO",
+      "marcado": true
+    },
+    {
+      "id": "formulario:deduzirDoFGTS",
+      "nome": "formulario:deduzirDoFGTS",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Deduzir do FGTS",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:competenciaInputDate",
+      "nome": "formulario:competenciaInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Data *"
+    },
+    {
+      "id": "formulario:valor",
+      "nome": "formulario:valor",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Valor *",
+      "maxlength": 16
+    },
+    {
+      "id": "formulario:salvar",
+      "nome": "formulario:salvar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id200','return','', {timing:'immediate'}, fun",
+      "ajax": true
+    },
+    {
+      "id": "formulario:ocorrencias",
+      "nome": "formulario:ocorrencias",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id200','return','', {timing:'immediate'}, fun",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:cmdIncluir",
+      "texto": "Adicionar"
+    },
+    {
+      "id": "formulario:salvar",
+      "texto": "Salvar"
+    },
+    {
+      "id": "formulario:ocorrencias",
+      "texto": "Ocorrências"
+    }
+  ],
+  "menu": "FGTS"
+}

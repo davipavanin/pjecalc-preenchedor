@@ -1,0 +1,26 @@
+{
+  "url": "/pjecalc/pages/calculo/honorarios.jsf",
+  "titulo": "",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:incluir",
+      "nome": "formulario:incluir",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id232','return','', {timing:'immediate'}, fun",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:incluir",
+      "texto": "Novo"
+    }
+  ],
+  "menu": "Honorários"
+}

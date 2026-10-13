@@ -1,0 +1,355 @@
+{
+  "url": "/pjecalc/pages/calculo/calculo.jsf",
+  "titulo": "",
+  "abas": [
+    "Dados do Processo",
+    "Parâmetros do Cálculo"
+  ],
+  "campos": [
+    {
+      "id": "formulario:idCalculo",
+      "nome": "formulario:idCalculo",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Número *"
+    },
+    {
+      "id": "formulario:tipo",
+      "nome": "formulario:tipo",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Tipo *",
+      "maxlength": 1
+    },
+    {
+      "id": "formulario:dataCriacao",
+      "nome": "formulario:dataCriacao",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Data de Criação *",
+      "maxlength": 1
+    },
+    {
+      "id": "formulario:numero",
+      "nome": "formulario:numero",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Número",
+      "maxlength": 7
+    },
+    {
+      "id": "formulario:digito",
+      "nome": "formulario:digito",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Dígito",
+      "maxlength": 2
+    },
+    {
+      "id": "formulario:ano",
+      "nome": "formulario:ano",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Ano",
+      "maxlength": 4
+    },
+    {
+      "id": "formulario:justica",
+      "nome": "formulario:justica",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Justiça",
+      "maxlength": 1
+    },
+    {
+      "id": "formulario:regiao",
+      "nome": "formulario:regiao",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Tribunal",
+      "maxlength": 2
+    },
+    {
+      "id": "formulario:vara",
+      "nome": "formulario:vara",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Vara",
+      "maxlength": 4
+    },
+    {
+      "id": "formulario:valorDaCausa",
+      "nome": "formulario:valorDaCausa",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Valor da Causa",
+      "maxlength": 16
+    },
+    {
+      "id": "formulario:autuadoEm",
+      "nome": "formulario:autuadoEm",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Autuado em",
+      "maxlength": 16
+    },
+    {
+      "id": "formulario:reclamanteNome",
+      "nome": "formulario:reclamanteNome",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Nome",
+      "maxlength": 150
+    },
+    {
+      "id": "formulario:documentoFiscalReclamante:0",
+      "nome": "formulario:documentoFiscalReclamante",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "CPF",
+      "valor": "CPF",
+      "marcado": false
+    },
+    {
+      "id": "formulario:documentoFiscalReclamante:1",
+      "nome": "formulario:documentoFiscalReclamante",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "CNPJ",
+      "valor": "CNPJ",
+      "marcado": false
+    },
+    {
+      "id": "formulario:documentoFiscalReclamante:2",
+      "nome": "formulario:documentoFiscalReclamante",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "CEI",
+      "valor": "CEI",
+      "marcado": false
+    },
+    {
+      "id": "formulario:reclamanteNumeroDocumentoFiscal",
+      "nome": "formulario:reclamanteNumeroDocumentoFiscal",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Número"
+    },
+    {
+      "id": "formulario:reclamanteTipoDocumentoPrevidenciario:0",
+      "nome": "formulario:reclamanteTipoDocumentoPrevidenciario",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "PIS",
+      "valor": "PIS",
+      "marcado": false
+    },
+    {
+      "id": "formulario:reclamanteTipoDocumentoPrevidenciario:1",
+      "nome": "formulario:reclamanteTipoDocumentoPrevidenciario",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "PASEP",
+      "valor": "PASEP",
+      "marcado": false
+    },
+    {
+      "id": "formulario:reclamanteTipoDocumentoPrevidenciario:2",
+      "nome": "formulario:reclamanteTipoDocumentoPrevidenciario",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "NIT",
+      "valor": "NIT",
+      "marcado": false
+    },
+    {
+      "id": "formulario:reclamanteNumeroDocumentoPrevidenciario",
+      "nome": "formulario:reclamanteNumeroDocumentoPrevidenciario",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Número",
+      "maxlength": 11
+    },
+    {
+      "id": "formulario:nomeAdvogadoReclamante",
+      "nome": "formulario:nomeAdvogadoReclamante",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Nome",
+      "maxlength": 150
+    },
+    {
+      "id": "formulario:numeroOABAdvogadoReclamante",
+      "nome": "formulario:numeroOABAdvogadoReclamante",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "OAB",
+      "maxlength": 9
+    },
+    {
+      "id": "formulario:tipoDocumentoAdvogadoReclamante:0",
+      "nome": "formulario:tipoDocumentoAdvogadoReclamante",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "CPF",
+      "valor": "CPF",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDocumentoAdvogadoReclamante:1",
+      "nome": "formulario:tipoDocumentoAdvogadoReclamante",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "CNPJ",
+      "valor": "CNPJ",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDocumentoAdvogadoReclamante:2",
+      "nome": "formulario:tipoDocumentoAdvogadoReclamante",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "CEI",
+      "valor": "CEI",
+      "marcado": false
+    },
+    {
+      "id": "formulario:numeroDocumentoAdvogadoReclamante",
+      "nome": "formulario:numeroDocumentoAdvogadoReclamante",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Número"
+    },
+    {
+      "id": "formulario:reclamadoNome",
+      "nome": "formulario:reclamadoNome",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Nome",
+      "maxlength": 150
+    },
+    {
+      "id": "formulario:tipoDocumentoFiscalReclamado:0",
+      "nome": "formulario:tipoDocumentoFiscalReclamado",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "CPF",
+      "valor": "CPF",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDocumentoFiscalReclamado:1",
+      "nome": "formulario:tipoDocumentoFiscalReclamado",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "CNPJ",
+      "valor": "CNPJ",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDocumentoFiscalReclamado:2",
+      "nome": "formulario:tipoDocumentoFiscalReclamado",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "CEI",
+      "valor": "CEI",
+      "marcado": false
+    },
+    {
+      "id": "formulario:reclamadoNumeroDocumentoFiscal",
+      "nome": "formulario:reclamadoNumeroDocumentoFiscal",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Número"
+    },
+    {
+      "id": "formulario:nomeAdvogadoReclamado",
+      "nome": "formulario:nomeAdvogadoReclamado",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Nome",
+      "maxlength": 150
+    },
+    {
+      "id": "formulario:numeroOABAdvogadoReclamado",
+      "nome": "formulario:numeroOABAdvogadoReclamado",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "OAB",
+      "maxlength": 9
+    },
+    {
+      "id": "formulario:tipoDocumentoAdvogadoReclamado:0",
+      "nome": "formulario:tipoDocumentoAdvogadoReclamado",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "CPF",
+      "valor": "CPF",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDocumentoAdvogadoReclamado:1",
+      "nome": "formulario:tipoDocumentoAdvogadoReclamado",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "CNPJ",
+      "valor": "CNPJ",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDocumentoAdvogadoReclamado:2",
+      "nome": "formulario:tipoDocumentoAdvogadoReclamado",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "CEI",
+      "valor": "CEI",
+      "marcado": false
+    },
+    {
+      "id": "formulario:numeroDocumentoAdvogadoReclamado",
+      "nome": "formulario:numeroDocumentoAdvogadoReclamado",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Número"
+    },
+    {
+      "id": "formulario:salvar",
+      "nome": "formulario:salvar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "function checarValor(dataMenor, tipo) {\n\t\t\t\t\tif (!(dataMenor && tipo)) {\n\t\t\t\t\t\tr",
+      "ajax": true
+    },
+    {
+      "id": "formulario:cancelar",
+      "nome": "formulario:cancelar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "function checarValor(dataMenor, tipo) {\n\t\t\t\t\tif (!(dataMenor && tipo)) {\n\t\t\t\t\t\tr",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:incluirAdvogadoReclamante",
+      "texto": "Adicionar Advogado"
+    },
+    {
+      "id": "formulario:incluirAdvogadoReclamado",
+      "texto": "Adicionar Advogado"
+    },
+    {
+      "id": "formulario:salvar",
+      "texto": "Salvar"
+    },
+    {
+      "id": "formulario:cancelar",
+      "texto": "Fechar"
+    }
+  ],
+  "menu": "Dados do Cálculo"
+}

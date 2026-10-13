@@ -1,0 +1,17 @@
+{
+  "name": "pje-calc-preenchedor",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Preenchedor do PJe-Calc Cidadão (MCP local + skill)",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.3.1",
+    "playwright-core": "1.56.1",
+    "zod": "4.4.3"
+  },
+  "scripts": {
+    "teste": "node testes/ponta-a-ponta.mjs",
+    "teste:mcp": "node testes/mcp-ponta-a-ponta.mjs",
+    "pacote": "mkdir -p dist && npx -y @anthropic-ai/mcpb@2.1.2 pack . dist/pje-calc-preenchedor.mcpb && cd skill && rm -f ../dist/pjecalc-preenchedor.zip && zip -qr ../dist/pjecalc-preenchedor.zip pjecalc-preenchedor"
+  }
+}

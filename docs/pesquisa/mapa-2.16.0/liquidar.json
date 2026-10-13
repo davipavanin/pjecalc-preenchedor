@@ -1,0 +1,60 @@
+{
+  "url": "/pjecalc/pages/calculo/liquidacao.jsf",
+  "titulo": "",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:dataDeLiquidacaoInputDate",
+      "nome": "formulario:dataDeLiquidacaoInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Data de Liquidação *"
+    },
+    {
+      "id": "formulario:indicesAcumulados:0",
+      "nome": "formulario:indicesAcumulados",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "A partir do mês subsequente ao vencimento das verbas",
+      "valor": "MES_SUBSEQUENTE_AO_VENCIMENTO",
+      "marcado": true
+    },
+    {
+      "id": "formulario:indicesAcumulados:1",
+      "nome": "formulario:indicesAcumulados",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "A partir do mês de vencimento das verbas",
+      "valor": "MES_DO_VENCIMENTO",
+      "marcado": false
+    },
+    {
+      "id": "formulario:indicesAcumulados:2",
+      "nome": "formulario:indicesAcumulados",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "A partir do mês subsequente ao vencimento das verbas mensais e a partir do mês de vencimento das verbas anuais e rescisórias",
+      "valor": "MES_SUBSEQUENTE_E_MES_DO_VENCIMENTO",
+      "marcado": false
+    },
+    {
+      "id": "formulario:liquidar",
+      "nome": "formulario:liquidar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id103','return','', {timing:'immediate'}, fun",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:liquidar",
+      "texto": "Liquidar"
+    }
+  ],
+  "menu": "Liquidar"
+}

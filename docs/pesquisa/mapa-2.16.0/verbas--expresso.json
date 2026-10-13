@@ -1,0 +1,514 @@
+{
+  "url": "/pjecalc/pages/calculo/verba/verbas-para-calculo.jsf",
+  "titulo": "Verbas Principais",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:j_id82:0:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:0:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "13º SALÁRIO",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:0:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:0:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "FÉRIAS + 1/3",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:0:j_id84:2:selecionada",
+      "nome": "formulario:j_id82:0:j_id84:2:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "VALE TRANSPORTE",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:1:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:1:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "ABONO PECUNIÁRIO",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:1:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:1:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "GORJETA",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:1:j_id84:2:selecionada",
+      "nome": "formulario:j_id82:1:j_id84:2:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "VALOR PAGO - NÃO TRIBUTÁVEL",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:2:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:2:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "ACORDO (MERA LIBERALIDADE)",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:2:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:2:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "GRATIFICAÇÃO DE FUNÇÃO",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:2:j_id84:2:selecionada",
+      "nome": "formulario:j_id82:2:j_id84:2:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "VALOR PAGO - TRIBUTÁVEL",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:3:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:3:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "ACORDO (MULTA)",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:3:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:3:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "GRATIFICAÇÃO POR TEMPO DE SERVIÇO",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:4:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:4:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "ACORDO (VERBAS INDENIZATÓRIAS)",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:4:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:4:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "HORAS EXTRAS 100%",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:5:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:5:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "ACORDO (VERBAS REMUNERATÓRIAS)",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:5:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:5:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "HORAS EXTRAS 50%",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:6:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:6:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "ADICIONAL DE HORAS EXTRAS 50%",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:6:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:6:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "HORAS IN ITINERE",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:7:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:7:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "ADICIONAL DE INSALUBRIDADE 10%",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:7:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:7:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "INDENIZAÇÃO ADICIONAL",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:8:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:8:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "ADICIONAL DE INSALUBRIDADE 20%",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:8:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:8:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "INDENIZAÇÃO PIS - ABONO SALARIAL",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:9:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:9:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "ADICIONAL DE INSALUBRIDADE 40%",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:9:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:9:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "INDENIZAÇÃO POR DANO ESTÉTICO",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:10:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:10:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "ADICIONAL DE PERICULOSIDADE 30%",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:10:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:10:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "INDENIZAÇÃO POR DANO MATERIAL",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:11:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:11:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "ADICIONAL DE PRODUTIVIDADE 30%",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:11:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:11:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "INDENIZAÇÃO POR DANO MORAL",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:12:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:12:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "ADICIONAL DE RISCO 40%",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:12:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:12:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "INTERVALO INTERJORNADAS",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:13:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:13:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "ADICIONAL DE SOBREAVISO",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:13:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:13:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "INTERVALO INTRAJORNADA",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:14:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:14:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "ADICIONAL DE TRANSFERÊNCIA 25%",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:14:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:14:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "MULTA CONVENCIONAL",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:15:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:15:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "ADICIONAL NOTURNO 20%",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:15:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:15:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "MULTA DO ARTIGO 477 DA CLT",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:16:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:16:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "AJUDA DE CUSTO",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:16:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:16:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "PARTICIPAÇÃO NOS LUCROS OU RESULTADOS - PLR",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:17:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:17:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "AVISO PRÉVIO",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:17:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:17:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "PRÊMIO PRODUÇÃO",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:18:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:18:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "CESTA BÁSICA",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:18:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:18:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "REPOUSO SEMANAL REMUNERADO",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:19:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:19:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "COMISSÃO",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:19:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:19:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "RESTITUIÇÃO / INDENIZAÇÃO DE DESPESA",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:20:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:20:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "DEVOLUÇÃO DE DESCONTOS INDEVIDOS",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:20:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:20:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "SALDO DE EMPREITADA",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:21:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:21:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "DIFERENÇA SALARIAL",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:21:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:21:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "SALDO DE SALÁRIO",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:22:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:22:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "DIÁRIAS - INTEGRAÇÃO AO SALÁRIO",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:22:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:22:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "SALÁRIO MATERNIDADE",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:23:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:23:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "DIÁRIAS - PAGAMENTO",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:23:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:23:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "SALÁRIO RETIDO",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:24:j_id84:0:selecionada",
+      "nome": "formulario:j_id82:24:j_id84:0:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "FERIADO EM DOBRO",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:j_id82:24:j_id84:1:selecionada",
+      "nome": "formulario:j_id82:24:j_id84:1:selecionada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "TÍQUETE-ALIMENTAÇÃO",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:salvar",
+      "nome": "formulario:salvar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id95','return','', {timing:'immediate'}, func",
+      "ajax": true
+    },
+    {
+      "id": "formulario:cancelar",
+      "nome": "formulario:cancelar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id95','return','', {timing:'immediate'}, func",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:salvar",
+      "texto": "Salvar"
+    },
+    {
+      "id": "formulario:cancelar",
+      "texto": "Cancelar"
+    }
+  ]
+}

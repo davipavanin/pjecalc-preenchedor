@@ -1,0 +1,607 @@
+{
+  "url": "/pjecalc/pages/calculo/verba/verba-calculo.jsf",
+  "titulo": "",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:descricao",
+      "nome": "formulario:descricao",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Nome *",
+      "maxlength": 50,
+      "ajax": true
+    },
+    {
+      "id": "formulario:assuntosCnj",
+      "nome": "formulario:assuntosCnj",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Assuntos CNJ *"
+    },
+    {
+      "id": "formulario:tipoVariacaoDaParcela:0",
+      "nome": "formulario:tipoVariacaoDaParcela",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Fixa",
+      "valor": "FIXA",
+      "marcado": true
+    },
+    {
+      "id": "formulario:tipoVariacaoDaParcela:1",
+      "nome": "formulario:tipoVariacaoDaParcela",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Variável",
+      "valor": "VARIAVEL",
+      "marcado": false
+    },
+    {
+      "id": "formulario:valor:0",
+      "nome": "formulario:valor",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Calculado",
+      "valor": "CALCULADO",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:valor:1",
+      "nome": "formulario:valor",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Informado",
+      "valor": "INFORMADO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:irpf",
+      "nome": "formulario:irpf",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "IRPF",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:inss",
+      "nome": "formulario:inss",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Contribuição Social",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:fgts",
+      "nome": "formulario:fgts",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "FGTS",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:previdenciaPrivada",
+      "nome": "formulario:previdenciaPrivada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Previdência Privada",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:pensaoAlimenticia",
+      "nome": "formulario:pensaoAlimenticia",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Pensão Alimentícia",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:caracteristicaVerba:0",
+      "nome": "formulario:caracteristicaVerba",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Comum",
+      "valor": "COMUM",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:caracteristicaVerba:1",
+      "nome": "formulario:caracteristicaVerba",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "13º Salário",
+      "valor": "DECIMO_TERCEIRO_SALARIO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:caracteristicaVerba:2",
+      "nome": "formulario:caracteristicaVerba",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Aviso Prévio",
+      "valor": "AVISO_PREVIO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:caracteristicaVerba:3",
+      "nome": "formulario:caracteristicaVerba",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Férias",
+      "valor": "FERIAS",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:ocorrenciaPagto:0",
+      "nome": "formulario:ocorrenciaPagto",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Desligamento",
+      "valor": "DESLIGAMENTO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:ocorrenciaPagto:1",
+      "nome": "formulario:ocorrenciaPagto",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Dezembro",
+      "valor": "DEZEMBRO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:ocorrenciaPagto:2",
+      "nome": "formulario:ocorrenciaPagto",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Mensal",
+      "valor": "MENSAL",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:ocorrenciaPagto:3",
+      "nome": "formulario:ocorrenciaPagto",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Período Aquisitivo",
+      "valor": "PERIODO_AQUISITIVO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:ocorrenciaAjuizamento:0",
+      "nome": "formulario:ocorrenciaAjuizamento",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Sim",
+      "valor": "OCORRENCIAS_VENCIDAS_E_VINCENDAS",
+      "marcado": false
+    },
+    {
+      "id": "formulario:ocorrenciaAjuizamento:1",
+      "nome": "formulario:ocorrenciaAjuizamento",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Não",
+      "valor": "OCORRENCIAS_VENCIDAS",
+      "marcado": true
+    },
+    {
+      "id": "formulario:tipoDeVerba:0",
+      "nome": "formulario:tipoDeVerba",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Principal",
+      "valor": "PRINCIPAL",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDeVerba:1",
+      "nome": "formulario:tipoDeVerba",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Reflexa",
+      "valor": "REFLEXO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:geraReflexo:0",
+      "nome": "formulario:geraReflexo",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Devido",
+      "valor": "DEVIDO",
+      "marcado": false
+    },
+    {
+      "id": "formulario:geraReflexo:1",
+      "nome": "formulario:geraReflexo",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Diferença",
+      "valor": "DIFERENCA",
+      "marcado": true
+    },
+    {
+      "id": "formulario:gerarPrincipal:0",
+      "nome": "formulario:gerarPrincipal",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Devido",
+      "valor": "DEVIDO",
+      "marcado": false
+    },
+    {
+      "id": "formulario:gerarPrincipal:1",
+      "nome": "formulario:gerarPrincipal",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Diferença",
+      "valor": "DIFERENCA",
+      "marcado": true
+    },
+    {
+      "id": "formulario:comporPrincipal:0",
+      "nome": "formulario:comporPrincipal",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Sim",
+      "valor": "SIM",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:comporPrincipal:1",
+      "nome": "formulario:comporPrincipal",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Não",
+      "valor": "NAO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:zeraValorNegativo",
+      "nome": "formulario:zeraValorNegativo",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Zerar Valor Negativo",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:periodoInicialInputDate",
+      "nome": "formulario:periodoInicialInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "De Até"
+    },
+    {
+      "id": "formulario:periodoFinalInputDate",
+      "nome": "formulario:periodoFinalInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "De Até"
+    },
+    {
+      "id": "formulario:excluirFaltaJustificada",
+      "nome": "formulario:excluirFaltaJustificada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Faltas Justificadas",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:excluirFaltaNaoJustificada",
+      "nome": "formulario:excluirFaltaNaoJustificada",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Faltas Não Justificadas",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:excluirFeriasGozadas",
+      "nome": "formulario:excluirFeriasGozadas",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Férias Gozadas",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:dobraValorDevido",
+      "nome": "formulario:dobraValorDevido",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Dobrar Valor Devido",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDaBaseTabelada",
+      "nome": "formulario:tipoDaBaseTabelada",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Bases Cadastradas",
+      "opcoes": [
+        [
+          "org.jboss.seam.ui.NoSelectionConverter.noSelectionValue",
+          ""
+        ],
+        [
+          "MAIOR_REMUNERACAO",
+          "Maior Remuneração"
+        ],
+        [
+          "HISTORICO_SALARIAL",
+          "Histórico Salarial"
+        ],
+        [
+          "SALARIO_DA_CATEGORIA",
+          "Piso Salarial"
+        ],
+        [
+          "SALARIO_MINIMO",
+          "Salário Mínimo"
+        ],
+        [
+          "VALE_TRANSPORTE",
+          "Vale Transporte"
+        ]
+      ],
+      "ajax": true
+    },
+    {
+      "id": "formulario:aplicarProporcionalidadeABase",
+      "nome": "formulario:aplicarProporcionalidadeABase",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Proporcionalizar",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:baseVerbaDeCalculo",
+      "nome": "formulario:baseVerbaDeCalculo",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Verba *",
+      "opcoes": [
+        [
+          "org.jboss.seam.ui.NoSelectionConverter.noSelectionValue",
+          ""
+        ]
+      ],
+      "ajax": true
+    },
+    {
+      "id": "formulario:integralizarBase",
+      "nome": "formulario:integralizarBase",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Integralizar *",
+      "opcoes": [
+        [
+          "SIM",
+          "Sim"
+        ],
+        [
+          "NAO",
+          "Não"
+        ]
+      ],
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDeDivisor:0",
+      "nome": "formulario:tipoDeDivisor",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Informado *",
+      "valor": "OUTRO_VALOR",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDeDivisor:1",
+      "nome": "formulario:tipoDeDivisor",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Carga Horária",
+      "valor": "CARGA_HORARIA",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDeDivisor:2",
+      "nome": "formulario:tipoDeDivisor",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Dias Úteis",
+      "valor": "DIAS_UTEIS",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDeDivisor:3",
+      "nome": "formulario:tipoDeDivisor",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Importada do Cartão de Ponto",
+      "valor": "IMPORTADA_DO_CARTAO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:outroValorDoDivisor",
+      "nome": "formulario:outroValorDoDivisor",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Informado * Carga Horária Dias Úteis Importada do Cartão de Ponto",
+      "maxlength": 100,
+      "ajax": true,
+      "mascara": true
+    },
+    {
+      "id": "formulario:outroValorDoMultiplicador",
+      "nome": "formulario:outroValorDoMultiplicador",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "",
+      "maxlength": 100,
+      "ajax": true,
+      "mascara": true
+    },
+    {
+      "id": "formulario:tipoDaQuantidade:0",
+      "nome": "formulario:tipoDaQuantidade",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Informada",
+      "valor": "INFORMADA",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDaQuantidade:1",
+      "nome": "formulario:tipoDaQuantidade",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Importada do Calendário",
+      "valor": "IMPORTADA_DO_CALENDARIO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDaQuantidade:2",
+      "nome": "formulario:tipoDaQuantidade",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Importada do Cartão de Ponto",
+      "valor": "IMPORTADA_DO_CARTAO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:valorInformadoDaQuantidade",
+      "nome": "formulario:valorInformadoDaQuantidade",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Valor Proporcionalizar",
+      "maxlength": 12,
+      "ajax": true,
+      "mascara": true
+    },
+    {
+      "id": "formulario:aplicarProporcionalidadeAQuantidade",
+      "nome": "formulario:aplicarProporcionalidadeAQuantidade",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Proporcionalizar",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDoValorPago:0",
+      "nome": "formulario:tipoDoValorPago",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Informado",
+      "valor": "INFORMADO",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDoValorPago:1",
+      "nome": "formulario:tipoDoValorPago",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Calculado",
+      "valor": "CALCULADO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:valorInformadoPago",
+      "nome": "formulario:valorInformadoPago",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Valor",
+      "maxlength": 16
+    },
+    {
+      "id": "formulario:aplicarProporcionalidadeValorPago",
+      "nome": "formulario:aplicarProporcionalidadeValorPago",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Proporcionalizar",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:comentarios",
+      "nome": "formulario:comentarios",
+      "tag": "textarea",
+      "tipo": "textarea",
+      "rotulo": "Comentários"
+    },
+    {
+      "id": "formulario:salvar",
+      "nome": "formulario:salvar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "//<![CDATA[\nnew Richfaces.hotKey('formulario:j_id521','return','', {timing:'imme",
+      "ajax": true
+    },
+    {
+      "id": "formulario:cancelar",
+      "nome": "formulario:cancelar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "//<![CDATA[\nnew Richfaces.hotKey('formulario:j_id521','return','', {timing:'imme",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:linkModalAssunto",
+      "texto": "Selecionar Assunto CNJ"
+    },
+    {
+      "id": "formulario:incluirItemProp",
+      "texto": "Adicionar Base"
+    },
+    {
+      "id": "formulario:salvar",
+      "texto": "Salvar"
+    },
+    {
+      "id": "formulario:cancelar",
+      "texto": "Cancelar"
+    }
+  ]
+}

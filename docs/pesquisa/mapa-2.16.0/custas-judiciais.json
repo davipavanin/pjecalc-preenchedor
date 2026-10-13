@@ -1,0 +1,286 @@
+{
+  "url": "/pjecalc/pages/calculo/custas-judiciais.jsf",
+  "titulo": "",
+  "abas": [
+    "Custas Devidas",
+    "Custas Recolhidas"
+  ],
+  "campos": [
+    {
+      "id": "formulario:baseParaCustasCalculadas",
+      "nome": "formulario:baseParaCustasCalculadas",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "",
+      "opcoes": [
+        [
+          "BRUTO_DEVIDO_AO_RECLAMANTE",
+          "Bruto Devido ao Reclamante"
+        ],
+        [
+          "BRUTO_DEVIDO_AO_RECLAMANTE_MAIS_DEBITOS_RECLAMADO",
+          "Bruto Devido ao Reclamante + Outros Débitos do Reclamado"
+        ]
+      ]
+    },
+    {
+      "id": "formulario:tipoDeCustasDeConhecimentoDoReclamante:0",
+      "nome": "formulario:tipoDeCustasDeConhecimentoDoReclamante",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Não se Aplica",
+      "valor": "NAO_SE_APLICA",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDeCustasDeConhecimentoDoReclamante:1",
+      "nome": "formulario:tipoDeCustasDeConhecimentoDoReclamante",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Calculada 2%",
+      "valor": "CALCULADA_2_POR_CENTO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDeCustasDeConhecimentoDoReclamante:2",
+      "nome": "formulario:tipoDeCustasDeConhecimentoDoReclamante",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Informada",
+      "valor": "INFORMADA",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDeCustasDeConhecimentoDoReclamado:0",
+      "nome": "formulario:tipoDeCustasDeConhecimentoDoReclamado",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Não se Aplica",
+      "valor": "NAO_SE_APLICA",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDeCustasDeConhecimentoDoReclamado:1",
+      "nome": "formulario:tipoDeCustasDeConhecimentoDoReclamado",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Calculada 2%",
+      "valor": "CALCULADA_2_POR_CENTO",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDeCustasDeConhecimentoDoReclamado:2",
+      "nome": "formulario:tipoDeCustasDeConhecimentoDoReclamado",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Informada",
+      "valor": "INFORMADA",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDeCustasDeLiquidacao:0",
+      "nome": "formulario:tipoDeCustasDeLiquidacao",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Não se Aplica",
+      "valor": "NAO_SE_APLICA",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDeCustasDeLiquidacao:1",
+      "nome": "formulario:tipoDeCustasDeLiquidacao",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Calculada 0,5%",
+      "valor": "CALCULADA_MEIO_POR_CENTO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoDeCustasDeLiquidacao:2",
+      "nome": "formulario:tipoDeCustasDeLiquidacao",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Informada",
+      "valor": "INFORMADA",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:dataVencimentoCustasFixasInputDate",
+      "nome": "formulario:dataVencimentoCustasFixasInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Vencimento",
+      "ajax": true
+    },
+    {
+      "id": "formulario:qtdeAtosUrbanos",
+      "nome": "formulario:qtdeAtosUrbanos",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Atos dos Oficiais de Justiça - Zona Urbana",
+      "maxlength": 3
+    },
+    {
+      "id": "formulario:qtdeAtosRurais",
+      "nome": "formulario:qtdeAtosRurais",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Atos dos Oficiais de Justiça - Zona Rural",
+      "maxlength": 3
+    },
+    {
+      "id": "formulario:qtdeAgravosDeInstrumento",
+      "nome": "formulario:qtdeAgravosDeInstrumento",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Agravo de Instrumento",
+      "maxlength": 3
+    },
+    {
+      "id": "formulario:qtdeAgravosDePeticao",
+      "nome": "formulario:qtdeAgravosDePeticao",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Agravo de Petição",
+      "maxlength": 3
+    },
+    {
+      "id": "formulario:qtdeImpugnacaoSentenca",
+      "nome": "formulario:qtdeImpugnacaoSentenca",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Impugnação à Sentença de Liquidação",
+      "maxlength": 3
+    },
+    {
+      "id": "formulario:qtdeEmbargosArrematacao",
+      "nome": "formulario:qtdeEmbargosArrematacao",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Embargos à Arrematação",
+      "maxlength": 3
+    },
+    {
+      "id": "formulario:qtdeEmbargosExecucao",
+      "nome": "formulario:qtdeEmbargosExecucao",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Embargos à Execução",
+      "maxlength": 3
+    },
+    {
+      "id": "formulario:qtdeEmbargosTerceiros",
+      "nome": "formulario:qtdeEmbargosTerceiros",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Embargos de Terceiros",
+      "maxlength": 3
+    },
+    {
+      "id": "formulario:qtdeRecursoRevista",
+      "nome": "formulario:qtdeRecursoRevista",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Recurso de Revista",
+      "maxlength": 3
+    },
+    {
+      "id": "formulario:tipoDeAuto",
+      "nome": "formulario:tipoDeAuto",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Tipo de Auto *",
+      "opcoes": [
+        [
+          "org.jboss.seam.ui.NoSelectionConverter.noSelectionValue",
+          ""
+        ],
+        [
+          "REMICAO",
+          "Remição"
+        ],
+        [
+          "ADJUDICACAO",
+          "Adjudicação"
+        ],
+        [
+          "ARREMATACAO",
+          "Arrematação"
+        ]
+      ]
+    },
+    {
+      "id": "formulario:dataVencimentoAutoInputDate",
+      "nome": "formulario:dataVencimentoAutoInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Vencimento *"
+    },
+    {
+      "id": "formulario:valorAvaliacaoAuto",
+      "nome": "formulario:valorAvaliacaoAuto",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Valor do Bem *",
+      "maxlength": 16
+    },
+    {
+      "id": "formulario:dataInicioArmazenamentoInputDate",
+      "nome": "formulario:dataInicioArmazenamentoInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Início *"
+    },
+    {
+      "id": "formulario:dataTerminoArmazenamentoInputDate",
+      "nome": "formulario:dataTerminoArmazenamentoInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Término"
+    },
+    {
+      "id": "formulario:valorAvaliacaoArmazenamento",
+      "nome": "formulario:valorAvaliacaoArmazenamento",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Valor do Bem *",
+      "maxlength": 16
+    },
+    {
+      "id": "formulario:salvar",
+      "nome": "formulario:salvar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id393','return','', {timing:'immediate'}, fun",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:cmdIncluirAutos",
+      "texto": "Adicionar"
+    },
+    {
+      "id": "formulario:cmdIncluirArmazenamento",
+      "texto": "Adicionar"
+    },
+    {
+      "id": "formulario:salvar",
+      "texto": "Salvar"
+    }
+  ],
+  "menu": "Custas Judiciais"
+}

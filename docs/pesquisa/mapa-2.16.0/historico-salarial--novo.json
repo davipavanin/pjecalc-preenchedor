@@ -1,0 +1,150 @@
+{
+  "url": "/pjecalc/pages/calculo/historico-salarial.jsf",
+  "titulo": "",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:arquivo:file",
+      "nome": "formulario:arquivo:file",
+      "tag": "input",
+      "tipo": "file",
+      "rotulo": ""
+    },
+    {
+      "id": "formulario:j_id97",
+      "nome": "formulario:j_id97",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "",
+      "ajax": true
+    },
+    {
+      "id": "formulario:nome",
+      "nome": "formulario:nome",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Nome *",
+      "maxlength": 120
+    },
+    {
+      "id": "formulario:tipoVariacaoDaParcela:0",
+      "nome": "formulario:tipoVariacaoDaParcela",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Fixa",
+      "valor": "FIXA",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoVariacaoDaParcela:1",
+      "nome": "formulario:tipoVariacaoDaParcela",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Variável",
+      "valor": "VARIAVEL",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:fgts",
+      "nome": "formulario:fgts",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "FGTS Marque esta incidência para cobrar FGTS sobre o Histórico Salarial que está",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:inss",
+      "nome": "formulario:inss",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Contribuição Social Marque esta incidência para incluir o Histórico Salarial que",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:competenciaInicialInputDate",
+      "nome": "formulario:competenciaInicialInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Competência Inicial *"
+    },
+    {
+      "id": "formulario:competenciaFinalInputDate",
+      "nome": "formulario:competenciaFinalInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Competência Final *"
+    },
+    {
+      "id": "formulario:tipoValor:0",
+      "nome": "formulario:tipoValor",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Informado",
+      "valor": "INFORMADO",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoValor:1",
+      "nome": "formulario:tipoValor",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Calculado",
+      "valor": "CALCULADO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:valorParaBaseDeCalculo",
+      "nome": "formulario:valorParaBaseDeCalculo",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Valor *",
+      "maxlength": 16
+    },
+    {
+      "id": "formulario:salvar",
+      "nome": "formulario:salvar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "//<![CDATA[\nnew Richfaces.hotKey('formulario:j_id276','return','', {timing:'imme",
+      "ajax": true
+    },
+    {
+      "id": "formulario:cancelar",
+      "nome": "formulario:cancelar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "//<![CDATA[\nnew Richfaces.hotKey('formulario:j_id276','return','', {timing:'imme",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:j_id97",
+      "texto": "Confirmar"
+    },
+    {
+      "id": "formulario:cmdGerarOcorrencias",
+      "texto": "Gerar Ocorrências"
+    },
+    {
+      "id": "formulario:salvar",
+      "texto": "Salvar"
+    },
+    {
+      "id": "formulario:cancelar",
+      "texto": "Cancelar"
+    }
+  ]
+}

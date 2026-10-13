@@ -1,0 +1,26 @@
+{
+  "url": "/pjecalc/pages/calculo/multas-indenizacoes.jsf",
+  "titulo": "",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:incluir",
+      "nome": "formulario:incluir",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id168','return','', {timing:'immediate'}, fun",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:incluir",
+      "texto": "Novo"
+    }
+  ],
+  "menu": "Multas e Indenizações"
+}

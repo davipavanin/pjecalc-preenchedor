@@ -1,0 +1,46 @@
+{
+  "processo": {
+    "numero": "0010999-64.2023.5.15.0001",
+    "valor_causa": 60000,
+    "reclamante": { "nome": "MARIA FICTICIA DE TESTE", "cpf": "111.444.777-35" },
+    "reclamada": { "nome": "EMPRESA FICTICIA DE TESTE LTDA", "cnpj": "11.222.333/0001-81" }
+  },
+  "contrato": {
+    "estado": "SP",
+    "municipio": "Campinas",
+    "admissao": "01/03/2021",
+    "demissao": "15/05/2023",
+    "ajuizamento": "10/09/2023",
+    "carga_horaria_mensal": 220,
+    "maior_remuneracao": 3300,
+    "ultima_remuneracao": 3300
+  },
+  "salarios": [
+    { "de": "03/2021", "ate": "12/2022", "valor": 3000 },
+    { "de": "01/2023", "ate": "05/2023", "valor": 3300 }
+  ],
+  "verbas": [
+    { "nome": "SALDO DE SALÁRIO" },
+    { "nome": "AVISO PRÉVIO" },
+    { "nome": "13º SALÁRIO" },
+    { "nome": "FÉRIAS + 1/3" },
+    { "nome": "MULTA DO ARTIGO 477 DA CLT" },
+    { "nome": "HORAS EXTRAS 50%", "horas_por_mes": 20, "reflexos": ["REPOUSO", "13º", "FÉRIAS", "AVISO"] },
+    { "nome": "INDENIZAÇÃO POR DANO MORAL", "valor": 5000 }
+  ],
+  "fgts": { "destino": "DEPOSITAR", "multa_40": true, "multa_467": false },
+  "correcao": {
+    "indices": [
+      { "indice": "IPCAE" },
+      { "indice": "SELIC", "a_partir_de": "10/09/2023" },
+      { "indice": "IPCA", "a_partir_de": "30/08/2024" }
+    ],
+    "juros": [
+      { "tabela": "TRD_SIMPLES" },
+      { "tabela": "SEM_JUROS", "a_partir_de": "10/09/2023" },
+      { "tabela": "TAXA_LEGAL", "a_partir_de": "30/08/2024" }
+    ],
+    "juros_fase_pre_judicial": true
+  },
+  "honorarios": [{ "devedor": "RECLAMADO", "percentual": 15, "credor": "ADVOGADO FICTICIO" }]
+}

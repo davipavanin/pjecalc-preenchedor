@@ -1,0 +1,178 @@
+{
+  "url": "/pjecalc/pages/calculo/salario-familia.jsf",
+  "titulo": "",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:apurarSalarioFamilia",
+      "nome": "formulario:apurarSalarioFamilia",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Apurar Salário-família",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:comporPrincipal:0",
+      "nome": "formulario:comporPrincipal",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Sim",
+      "valor": "SIM",
+      "marcado": true
+    },
+    {
+      "id": "formulario:comporPrincipal:1",
+      "nome": "formulario:comporPrincipal",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Não",
+      "valor": "NAO",
+      "marcado": false
+    },
+    {
+      "id": "formulario:dataInicialInputDate",
+      "nome": "formulario:dataInicialInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Competência Inicial *",
+      "ajax": true
+    },
+    {
+      "id": "formulario:dataFinalInputDate",
+      "nome": "formulario:dataFinalInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Competência Final *",
+      "ajax": true
+    },
+    {
+      "id": "formulario:quantFilhosMenores14Anos",
+      "nome": "formulario:quantFilhosMenores14Anos",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Qtd de filhos menores de 14 anos *",
+      "maxlength": 2
+    },
+    {
+      "id": "formulario:variacaoDataInicialInputDate",
+      "nome": "formulario:variacaoDataInicialInputDate",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Competência *"
+    },
+    {
+      "id": "formulario:variacaoQuantFilhosMenores14Anos",
+      "nome": "formulario:variacaoQuantFilhosMenores14Anos",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Quantidade *",
+      "maxlength": 2
+    },
+    {
+      "id": "formulario:tipoSalarioPago:0",
+      "nome": "formulario:tipoSalarioPago",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Nenhum",
+      "valor": "NENHUM",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoSalarioPago:1",
+      "nome": "formulario:tipoSalarioPago",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Maior Remuneração",
+      "valor": "MAIOR_REMUNERACAO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoSalarioPago:2",
+      "nome": "formulario:tipoSalarioPago",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Histórico Salarial ",
+      "valor": "HISTORICO_SALARIAL",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:historicoSalarial",
+      "nome": "formulario:historicoSalarial",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Histórico *",
+      "opcoes": [
+        [
+          "org.jboss.seam.ui.NoSelectionConverter.noSelectionValue",
+          ""
+        ]
+      ]
+    },
+    {
+      "id": "formulario:verba",
+      "nome": "formulario:verba",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Verba *",
+      "opcoes": [
+        [
+          "org.jboss.seam.ui.NoSelectionConverter.noSelectionValue",
+          ""
+        ]
+      ]
+    },
+    {
+      "id": "formulario:integralizar",
+      "nome": "formulario:integralizar",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Integralizar *",
+      "opcoes": [
+        [
+          "SIM",
+          "Sim"
+        ],
+        [
+          "NAO",
+          "Não"
+        ]
+      ]
+    },
+    {
+      "id": "formulario:salvar",
+      "nome": "formulario:salvar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id205','return','', {timing:'immediate'}, fun",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:cmdAdicionarVariacao",
+      "texto": "Adicionar Variação na Quantidade de Filhos"
+    },
+    {
+      "id": "formulario:cmdAdicionarHistoricoSalarial",
+      "texto": "Adicionar Histórico Salarial"
+    },
+    {
+      "id": "formulario:cmdAdicionarSalarioDevido",
+      "texto": "Adicionar Salário Devido"
+    },
+    {
+      "id": "formulario:salvar",
+      "texto": "Salvar"
+    }
+  ],
+  "menu": "Salário-família"
+}

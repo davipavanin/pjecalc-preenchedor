@@ -1,0 +1,10 @@
+/ambiente/
+/docs/
+/ferramentas/
+/testes/
+/exemplos/
+/skill/
+/dist/
+/.git/
+/*.md
+/.gitignore

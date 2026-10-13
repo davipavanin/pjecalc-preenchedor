@@ -1,0 +1,38 @@
+{
+  "url": "/pjecalc/pages/calculo/historico-salarial.jsf",
+  "titulo": "",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:incluir",
+      "nome": "formulario:incluir",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id276','return','', {timing:'immediate'}, fun",
+      "ajax": true
+    },
+    {
+      "id": "formulario:visualizarOcorrencias",
+      "nome": "formulario:visualizarOcorrencias",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id276','return','', {timing:'immediate'}, fun",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:incluir",
+      "texto": "Novo"
+    },
+    {
+      "id": "formulario:visualizarOcorrencias",
+      "texto": "Grade de Ocorrências"
+    }
+  ],
+  "menu": "Histórico Salarial"
+}

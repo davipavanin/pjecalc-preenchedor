@@ -1,0 +1,233 @@
+{
+  "url": "/pjecalc/pages/calculo/relatorio/relatorio-calculo.jsf",
+  "titulo": "",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:formatoSaida:0",
+      "nome": "formulario:formatoSaida",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "PDF",
+      "valor": "PDF",
+      "marcado": true
+    },
+    {
+      "id": "formulario:formatoSaida:1",
+      "nome": "formulario:formatoSaida",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "HTML",
+      "valor": "HTML",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:0",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Resumo Precatório / RPV",
+      "valor": "RESUMO_PRECATORIO",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:1",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Resumo de Cálculo",
+      "valor": "RESUMO_DE_CALCULO",
+      "marcado": true
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:2",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Critério de Cálculo e Fundamentação Legal",
+      "valor": "JUSTIFICATIVA",
+      "marcado": true
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:3",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Dados do Cálculo",
+      "valor": "DADOS_DO_CALCULO",
+      "marcado": true
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:4",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Faltas e Férias",
+      "valor": "FALTAS_E_FERIAS",
+      "marcado": true
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:5",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Cartão de Ponto Diário",
+      "valor": "CARTAO_DIARIO",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:6",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Cartão de Ponto Mensal",
+      "valor": "CARTAO_MENSAL",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:7",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Histórico Salarial",
+      "valor": "HISTORICO_SALARIAL",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:8",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Verbas",
+      "valor": "DEMONSTRATIVO_DE_CALCULO",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:9",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Juros sobre Verbas",
+      "valor": "APURACAO_DE_JUROS",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:10",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Salário-família",
+      "valor": "SALARIO_FAMILIA",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:11",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Seguro-desemprego",
+      "valor": "SEGURO_DESEMPREGO",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:12",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "FGTS",
+      "valor": "DEMONSTRATIVO_FGTS",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:13",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Contribuição Social",
+      "valor": "DEMONSTRATIVO_INSS",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:14",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "eSocial - Evento S-2500",
+      "valor": "DEMONSTRATIVO_ESOCIAL_INSS_FGTS",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:15",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Previdência Privada",
+      "valor": "PREVIDENCIA_PRIVADA",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:16",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Pensão Alimentícia",
+      "valor": "PENSAO_ALIMENTICIA",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:17",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Imposto de Renda",
+      "valor": "DEMONSTRATIVO_IRPF",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:18",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Multas / Indenizações",
+      "valor": "DEMONSTRATIVO_MULTA",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:19",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Honorários",
+      "valor": "DEMONSTRATIVO_HONORARIO",
+      "marcado": false
+    },
+    {
+      "id": "formulario:tipoDeRelatorio:20",
+      "nome": "formulario:tipoDeRelatorio",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Custas Judiciais",
+      "valor": "DEMONSTRATIVO_CUSTAS",
+      "marcado": false
+    },
+    {
+      "id": "formulario:imprimirConsolidado",
+      "nome": "formulario:imprimirConsolidado",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id98','return','', {timing:'immediate'}, func",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:imprimirConsolidado",
+      "texto": "Imprimir"
+    }
+  ],
+  "menu": "Imprimir"
+}

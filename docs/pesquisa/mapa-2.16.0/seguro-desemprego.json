@@ -1,0 +1,195 @@
+{
+  "url": "/pjecalc/pages/calculo/seguro-desemprego.jsf",
+  "titulo": "",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:apurarSeguroDesemprego",
+      "nome": "formulario:apurarSeguroDesemprego",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Apurar Seguro-desemprego",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:apurarEmpregadoDomestico",
+      "nome": "formulario:apurarEmpregadoDomestico",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Empregado Doméstico",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:solicitacao",
+      "nome": "formulario:solicitacao",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Tipo de Solicitação *",
+      "opcoes": [
+        [
+          "PRIMEIRA",
+          "Primeira Solicitação"
+        ],
+        [
+          "SEGUNDA",
+          "Segunda Solicitação"
+        ],
+        [
+          "DEMAIS",
+          "Demais Solicitações"
+        ]
+      ],
+      "ajax": true
+    },
+    {
+      "id": "formulario:valor:0",
+      "nome": "formulario:valor",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Informado",
+      "valor": "INFORMADO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:valor:1",
+      "nome": "formulario:valor",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Calculado",
+      "valor": "CALCULADO",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:comporPrincipal:0",
+      "nome": "formulario:comporPrincipal",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Sim",
+      "valor": "SIM",
+      "marcado": true
+    },
+    {
+      "id": "formulario:comporPrincipal:1",
+      "nome": "formulario:comporPrincipal",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Não",
+      "valor": "NAO",
+      "marcado": false
+    },
+    {
+      "id": "formulario:numeroDeParcelas",
+      "nome": "formulario:numeroDeParcelas",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Quantidade de Parcelas ",
+      "maxlength": 10
+    },
+    {
+      "id": "formulario:tipoSalarioPago:0",
+      "nome": "formulario:tipoSalarioPago",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Nenhum",
+      "valor": "NENHUM",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoSalarioPago:1",
+      "nome": "formulario:tipoSalarioPago",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Maior Remuneração",
+      "valor": "MAIOR_REMUNERACAO",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:tipoSalarioPago:2",
+      "nome": "formulario:tipoSalarioPago",
+      "tag": "input",
+      "tipo": "radio",
+      "rotulo": "Histórico Salarial ",
+      "valor": "HISTORICO_SALARIAL",
+      "marcado": true,
+      "ajax": true
+    },
+    {
+      "id": "formulario:historicoSalarial",
+      "nome": "formulario:historicoSalarial",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Histórico *",
+      "opcoes": [
+        [
+          "org.jboss.seam.ui.NoSelectionConverter.noSelectionValue",
+          ""
+        ]
+      ]
+    },
+    {
+      "id": "formulario:verba",
+      "nome": "formulario:verba",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Verba *",
+      "opcoes": [
+        [
+          "org.jboss.seam.ui.NoSelectionConverter.noSelectionValue",
+          ""
+        ]
+      ]
+    },
+    {
+      "id": "formulario:integralizar",
+      "nome": "formulario:integralizar",
+      "tag": "select",
+      "tipo": "select-one",
+      "rotulo": "Integralizar *",
+      "opcoes": [
+        [
+          "SIM",
+          "Sim"
+        ],
+        [
+          "NAO",
+          "Não"
+        ]
+      ]
+    },
+    {
+      "id": "formulario:salvar",
+      "nome": "formulario:salvar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id172','return','', {timing:'immediate'}, fun",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:cmdAdicionarHistoricoSalarial",
+      "texto": "Adicionar Histórico Salarial"
+    },
+    {
+      "id": "formulario:cmdAdicionarSalarioDevido",
+      "texto": "Adicionar Salário Devido"
+    },
+    {
+      "id": "formulario:salvar",
+      "texto": "Salvar"
+    }
+  ],
+  "menu": "Seguro-desemprego"
+}

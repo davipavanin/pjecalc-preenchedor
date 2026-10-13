@@ -1,0 +1,52 @@
+{
+  "url": "/pjecalc/pages/calculo/pensao-alimenticia.jsf",
+  "titulo": "",
+  "abas": [],
+  "campos": [
+    {
+      "id": "formulario:apurarPensaoAlimenticia",
+      "nome": "formulario:apurarPensaoAlimenticia",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Apurar Pensão Alimentícia",
+      "valor": "on",
+      "marcado": false,
+      "ajax": true
+    },
+    {
+      "id": "formulario:aliquota",
+      "nome": "formulario:aliquota",
+      "tag": "input",
+      "tipo": "text",
+      "rotulo": "Alíquota (%) "
+    },
+    {
+      "id": "formulario:incidirSobreJuros",
+      "nome": "formulario:incidirSobreJuros",
+      "tag": "input",
+      "tipo": "checkbox",
+      "rotulo": "Incidir sobre Juros",
+      "valor": "on",
+      "marcado": false
+    },
+    {
+      "id": "formulario:salvar",
+      "nome": "formulario:salvar",
+      "tag": "input",
+      "tipo": "button",
+      "rotulo": "new Richfaces.hotKey('formulario:j_id102','return','', {timing:'immediate'}, fun",
+      "ajax": true
+    }
+  ],
+  "acoes": [
+    {
+      "id": "formulario:searchTextBt",
+      "texto": "Pesquisa de documento"
+    },
+    {
+      "id": "formulario:salvar",
+      "texto": "Salvar"
+    }
+  ],
+  "menu": "Pensão Alimentícia"
+}
