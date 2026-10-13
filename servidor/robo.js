@@ -5,6 +5,8 @@ import { chromium } from "playwright-core";
 import fs from "node:fs";
 import path from "node:path";
 import zlib from "node:zlib";
+import os from "node:os";
+import { regional } from "./ficha.js";
 
 export const BASE = process.env.PJECALC_URL || "http://localhost:9257/pjecalc";
 export const VERSOES = ["2.16.0"];
@@ -94,7 +96,7 @@ const limparMensagens = (p) => p.evaluate(() => document.querySelectorAll(".rich
 
 async function clicar(p, sel) { await esperar(p); await (typeof sel === "string" ? p.locator(sel) : sel).click(); await esperar(p); }
 
-async function salvar(p, etapa, botao = "salvar") {
+export async function salvar(p, etapa, botao = "salvar") {
   await limparMensagens(p);
   await clicar(p, id(botao));
   // Algumas telas (verba com valor alterado) abrem uma caixa "Confirma operação?" desenhada na página, não um dialog do navegador.
@@ -131,7 +133,7 @@ async function digitar(p, campo, texto) {
 }
 
 // Sair do campo e esperar: o AJAX de "perdeu o foco" não pode coincidir com o próximo clique (a fila do PJe-Calc descarta um deles).
-async function escrever(p, campo, texto) {
+export async function escrever(p, campo, texto) {
   await esperar(p);
   const l = p.locator(id(campo));
   await l.fill(String(texto));
@@ -145,12 +147,12 @@ async function escrever(p, campo, texto) {
   }
 }
 
-async function radio(p, campo, valor) {
+export async function radio(p, campo, valor) {
   const l = p.locator(`input[type=radio][name='formulario:${campo}'][value='${valor}']`);
   if (!(await l.isChecked())) { await l.click(); await esperar(p); }
 }
 
-async function caixa(p, campo, ligado) {
+export async function caixa(p, campo, ligado) {
   const l = p.locator(id(campo));
   if ((await l.isChecked()) !== ligado) { await l.click(); await esperar(p); }
 }
@@ -194,9 +196,38 @@ export async function abrirCalculo(p, numero) {
   if (aberto !== String(numero)) throw new Error(`Pedi o cálculo ${numero}, mas o PJe-Calc abriu o ${aberto}.`);
 }
 
+// ---------- Tabelas de correção, juros e índices ----------
+
+// As tabelas que vêm no instalador param em 2021: sem atualizar, o PJe-Calc não corrige nem aplica juros depois disso.
+// Elas são por Regional (importar uma apaga as outras). Importa quando muda o TRT ou a cada 24 h; precisa de internet.
+const MARCA = path.join(process.env.PJECALC_ESTADO || path.join(os.homedir(), ".pjecalc-preenchedor"), "tabelas.json");
+
+export async function garantirTabelas(p, trt, log, { horas = 24 } = {}) {
+  let m = {};
+  try { m = JSON.parse(fs.readFileSync(MARCA, "utf8")); } catch {}
+  if (m.regional === trt && m.base === BASE && Date.now() - m.quando < horas * 3600000) return;
+  log(`Atualizando as tabelas de correção, juros e índices do ${trt} no PJe-Calc (precisa de internet; leva 1 a 3 minutos)...`);
+  await p.goto(BASE + "/pages/replicacao/replicacao.jsf");
+  await esperar(p);
+  await p.selectOption(id("regional"), trt);
+  await esperar(p);
+  await limparMensagens(p);
+  // envio de página inteira que demora minutos: esperar o "load" da resposta, não o clique
+  await Promise.all([p.waitForEvent("load", { timeout: 30 * 60000 }), p.locator(id("atualizarOnline")).click({ noWaitAfter: true })]);
+  await esperar(p);
+  const msg = await mensagens(p);
+  // "Você já possui as tabelas ... mais recentes" também é sucesso
+  if (msg.some((x) => /^Erro/i.test(x)) || !msg.some((x) => /Sucesso|já possui as tabelas/i.test(x)))
+    throw new Error(`Não consegui atualizar as tabelas do ${trt} no PJe-Calc (o computador está sem internet?). ${msg.join(" ")}`);
+  fs.mkdirSync(path.dirname(MARCA), { recursive: true });
+  fs.writeFileSync(MARCA, JSON.stringify({ regional: trt, base: BASE, quando: Date.now() }));
+  log(`Tabelas do ${trt} atualizadas.`);
+}
+
 // ---------- Preenchimento ----------
 
 export async function preencher(p, ficha, log) {
+  await garantirTabelas(p, regional(ficha), log);
   await p.goto(BASE + "/pages/principal.jsf");
   await esperar(p);
   await p.getByRole("link", { name: "Criar Novo Cálculo" }).click();
@@ -286,9 +317,11 @@ async function verbas(p, f, log) {
   }
   await salvar(p, "Lançamento Expresso");
   log(`Lançamento Expresso: ${f.verbas.map((v) => v.nome).join(", ")}.`);
-  for (const v of f.verbas) await parametrizarVerba(p, v, log);
+  const parciais = [];
+  for (const v of f.verbas) if (await parametrizarVerba(p, v, f.contrato, log)) parciais.push(v);
   for (const v of f.verbas) if (v.reflexos) await reflexos(p, v, log);
   await regerar(p, log);
+  for (const v of parciais) await ajustarAvos(p, v, f.contrato, log);
 }
 
 // As ocorrências de cada verba nascem no Lançamento Expresso; parâmetros mudados depois (valor informado,
@@ -314,11 +347,33 @@ export async function abrirParametros(p, nome) {
   if (descricao.trim() !== nome) throw new Error(`Abri os parâmetros de "${descricao}" em vez de "${nome}"; parei para não alterar a verba errada.`);
 }
 
-async function parametrizarVerba(p, v, log) {
+// Nome com que a verba fica na tela: horas extras com adicional da convenção são renomeadas ("HORAS EXTRAS 60%").
+const nomeTela = (v) => (v.adicional ? v.nome.replace(/\d+%/, `${v.adicional}%`) : v.nome);
+
+// 13º e férias têm ocorrência fixa: o 13º vence em dezembro e as férias, na 2.16.0, todas na data da demissão.
+// Se o período deferido termina antes disso, o PJe-Calc não gera ocorrência e a verba sai zerada. Então o período
+// vai até o vencimento e os avos são ajustados depois (ajustarAvos). Devolve a data final para o PJe-Calc, ou null.
+function fimDoVencimento(v, c) {
+  if (!v.ate || !["13º SALÁRIO", "FÉRIAS + 1/3"].includes(v.nome)) return null;
+  const ate = dia(v.ate);
+  let fim;
+  if (v.nome === "13º SALÁRIO") fim = new Date(ate.getFullYear(), 11, 31);
+  else if (c.demissao) fim = dia(c.demissao);
+  else { fim = dia(c.admissao); while (fim <= ate) fim.setFullYear(fim.getFullYear() + 1); fim.setDate(fim.getDate() - 1); }
+  if (c.demissao && fim > dia(c.demissao)) fim = dia(c.demissao);
+  return fim > ate ? fmt(fim) : null;
+}
+
+// Devolve true se a verba precisa de ajuste de avos depois de regerar as ocorrências.
+async function parametrizarVerba(p, v, c, log) {
   await abrirParametros(p, v.nome);
   const feito = [];
+  const fimPJe = fimDoVencimento(v, c);
   if (v.de) { await digitar(p, "periodoInicialInputDate", v.de); feito.push(`de ${v.de}`); }
-  if (v.ate) { await digitar(p, "periodoFinalInputDate", v.ate); feito.push(`até ${v.ate}`); }
+  if (v.ate) {
+    await digitar(p, "periodoFinalInputDate", fimPJe ?? v.ate);
+    feito.push(fimPJe ? `até ${v.ate} (período no PJe-Calc até ${fimPJe}, o vencimento; avos ajustados depois)` : `até ${v.ate}`);
+  }
   if (v.valor !== undefined) {
     await radio(p, "valor", "INFORMADO");
     // Valor fixado na decisão é pago uma vez: o padrão do PJe-Calc (Mensal + Proporcionalizar) repetiria o valor a cada mês do período.
@@ -341,9 +396,70 @@ async function parametrizarVerba(p, v, log) {
       await escrever(p, "valorInformadoDaQuantidade", brl(v.horas_por_mes));
       feito.push(`${brl(v.horas_por_mes)} h/mês`);
     }
+    if (v.adicional) {
+      await escrever(p, "outroValorDoMultiplicador", (1 + v.adicional / 100).toFixed(8).replace(".", ","));
+      await escrever(p, "descricao", nomeTela(v));
+      feito.push(`adicional de ${v.adicional}% (multiplicador ${(1 + v.adicional / 100).toFixed(2).replace(".", ",")}), renomeada "${nomeTela(v)}"`);
+    }
   }
   await salvar(p, `Parâmetros da verba ${v.nome}`);
   log(`Verba ${v.nome}: ${feito.length ? feito.join(", ") : "parâmetros padrão do PJe-Calc"}.`);
+  return Boolean(fimPJe);
+}
+
+const dia = (s) => { const [d, m, a] = s.split("/").map(Number); return new Date(a, m - 1, d); };
+const fmt = (d) => `${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}/${d.getFullYear()}`;
+const dias = (a, b) => Math.round((b - a) / 86400000) + 1; // inclusivo
+const somaMes = (d, n) => new Date(d.getFullYear(), d.getMonth() + n, d.getDate());
+
+// Avos do período [a, b] dentro da janela [ini, fim] da ocorrência: conta cada fração com 15 dias ou mais.
+// 13º: meses do calendário (Lei 4.090/62, art. 1º, § 2º). Férias: meses do período aquisitivo (CLT, art. 146, par. único).
+export function avos(tipo, a, b, ini, fim) {
+  const de = new Date(Math.max(a, ini)), ate = new Date(Math.min(b, fim));
+  if (de > ate) return 0;
+  let n = 0;
+  if (tipo === "13º SALÁRIO") {
+    for (let m = new Date(de.getFullYear(), de.getMonth(), 1); m <= ate; m = somaMes(m, 1)) {
+      const fimMes = new Date(m.getFullYear(), m.getMonth() + 1, 0);
+      if (dias(new Date(Math.max(m, de)), new Date(Math.min(fimMes, ate))) >= 15) n++;
+    }
+  } else {
+    for (let k = 0; k < 12; k++) {
+      const bi = somaMes(ini, k), bf = new Date(somaMes(ini, k + 1) - 86400000);
+      const x = new Date(Math.max(bi, de)), y = new Date(Math.min(bf, ate));
+      if (x <= y && dias(x, y) >= 15) n++;
+    }
+  }
+  return n;
+}
+
+// Na grade "Ocorrências da Verba", troca a quantidade (avos) de cada ocorrência pelos avos do período deferido.
+async function ajustarAvos(p, v, c, log) {
+  if (!p.url().includes(PAGINA.Verbas)) await irPara(p, "Verbas");
+  const link = await p.evaluate((n) => {
+    for (const td of document.querySelectorAll("[id='formulario:listagem'] td"))
+      if (td.textContent.trim() === n) return td.closest("tr").querySelector("a[title='Ocorrências da Verba']")?.id;
+  }, nomeTela(v));
+  if (!link) throw new Error(`Não achei as ocorrências da verba "${nomeTela(v)}".`);
+  await clicar(p, `[id='${link}']`);
+  const linhas = await p.evaluate(() => [...document.querySelectorAll("[id^='formulario:listagem:'][id$=':termoQuant']")]
+    .filter((e) => /^formulario:listagem:\d+:termoQuant$/.test(e.id))
+    .map((e) => ({ id: e.id.replace("formulario:", ""), datas: [...e.closest("tr").querySelectorAll("input")].map((i) => i.value).filter((x) => /^\d{2}\/\d{2}\/\d{4}$/.test(x)) })));
+  if (!linhas.length) throw new Error(`O PJe-Calc não gerou ocorrências para "${nomeTela(v)}".`);
+  const a = dia(v.de ?? c.admissao), b = dia(v.ate);
+  const feito = [];
+  for (const [k, l] of linhas.entries()) {
+    // a data da linha é o vencimento: 13º → o ano civil dela; férias → o k-ésimo período aquisitivo, na ordem da grade
+    const venc = dia(l.datas[0]);
+    const [ini, fim] = v.nome === "13º SALÁRIO"
+      ? [new Date(venc.getFullYear(), 0, 1), new Date(venc.getFullYear(), 11, 31)]
+      : [somaMes(dia(c.admissao), 12 * k), new Date(somaMes(dia(c.admissao), 12 * (k + 1)) - 86400000)];
+    const n = avos(v.nome, a, b, ini, fim);
+    await escrever(p, l.id, `${n},0000`);
+    feito.push(`${v.nome === "13º SALÁRIO" ? `13º/${venc.getFullYear()}` : `período aquisitivo ${fmt(ini)}–${fmt(fim)}`}: ${n}/12`);
+  }
+  await salvar(p, `Ocorrências da verba ${v.nome}`);
+  log(`Avos de ${v.nome} no período deferido (${v.de ?? c.admissao} a ${v.ate}): ${feito.join("; ")}.`);
 }
 
 const prefixo = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toUpperCase().trim();
@@ -361,7 +477,7 @@ async function reflexos(p, v, log) {
         .map((c) => ({ i, id: c.id, nome: c.closest("tr").textContent.trim().replace(/\s+/g, " "), marcado: c.checked }));
     }
     return [];
-  }, v.nome);
+  }, nomeTela(v));
   const disponiveis = await lista();
   if (!disponiveis.length) { log(`Verba ${v.nome}: o PJe-Calc não oferece reflexos para ela.`); return; }
   const quer = v.reflexos.map(prefixo);
@@ -383,11 +499,19 @@ async function reflexos(p, v, log) {
 async function fgts(p, fg, log) {
   await irPara(p, "FGTS");
   await radio(p, "tipoDeVerba", fg.destino);
-  await caixa(p, "multa", fg.multa_40);
-  if (fg.multa_40) await radio(p, "multaDoFgts", "QUARENTA_POR_CENTO");
+  await caixa(p, "multa", fg.multa !== "NAO");
+  if (fg.multa !== "NAO") await radio(p, "multaDoFgts", fg.multa === "20" ? "VINTE_POR_CENTO" : "QUARENTA_POR_CENTO");
   await caixa(p, "multaDoArtigo467", fg.multa_467);
+  // "Saldo e/ou Saque": cada depósito entra na lista; "Deduzir do FGTS" só destrava depois de haver algum
+  for (const d of fg.depositos) {
+    await digitar(p, "competenciaInputDate", d.data);
+    await escrever(p, "valor", brl(d.valor));
+    await clicar(p, id("cmdIncluir"));
+  }
+  if (fg.depositos.length) await caixa(p, "deduzirDoFGTS", true);
   await salvar(p, "FGTS");
-  log(`FGTS: ${fg.destino === "PAGAR" ? "pagar ao reclamante" : "depositar na conta vinculada"}${fg.multa_40 ? ", multa de 40%" : ""}${fg.multa_467 ? ", multa do art. 467" : ""}.`);
+  const total = fg.depositos.reduce((t, d) => t + d.valor, 0);
+  log(`FGTS: ${fg.destino === "PAGAR" ? "pagar ao reclamante" : "depositar na conta vinculada"}${fg.multa !== "NAO" ? `, multa de ${fg.multa}%` : ", sem multa"}${fg.multa_467 ? ", multa do art. 467" : ""}${fg.depositos.length ? `, deduzindo ${fg.depositos.length} depósito(s) já feito(s) (R$ ${brl(total)})` : ""}.`);
 }
 
 async function honorario(p, h, log) {
@@ -398,9 +522,9 @@ async function honorario(p, h, log) {
   await radio(p, "tipoValor", "CALCULADO");
   await escrever(p, "aliquota", brl(h.percentual));
   await escolherPorTexto(p, "baseParaApuracao", "Bruto");
-  if (h.credor) await escrever(p, "nomeCredor", h.credor);
+  await escrever(p, "nomeCredor", h.credor);
   await salvar(p, "Honorários");
-  log(`Honorários advocatícios: ${brl(h.percentual)}% sobre o bruto, devidos pelo ${h.devedor.toLowerCase()}${h.credor ? ` a ${h.credor}` : ""}.`);
+  log(`Honorários advocatícios: ${brl(h.percentual)}% sobre o bruto, devidos pelo ${h.devedor.toLowerCase()} a ${h.credor}.`);
 }
 
 async function correcao(p, c, log) {

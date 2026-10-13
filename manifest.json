@@ -3,7 +3,7 @@
   "manifest_version": "0.3",
   "name": "pje-calc-preenchedor",
   "display_name": "PJe-Calc Preenchedor",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Preenche o PJe-Calc Cidadão instalado no computador a partir de uma ficha revisada pelo advogado, liquida e salva o PDF e o .PJC oficiais.",
   "long_description": "A IA monta a ficha do cálculo a partir da sentença, o advogado revisa e aprova, e a extensão digita no PJe-Calc oficial pelo Microsoft Edge, como uma pessoa faria. Quem calcula é sempre o PJe-Calc. Testado na versão 2.16.0. Requer o PJe-Calc aberto.",
   "author": {

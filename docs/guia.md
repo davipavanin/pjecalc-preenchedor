@@ -42,7 +42,9 @@ PJe-Calc e peça: "liquide e exporte o cálculo nº X".
 - Dados do processo e do contrato, evolução salarial, prescrição quinquenal.
 - Verbas do Lançamento Expresso: rescisórias, horas extras com reflexos, adicionais, multas dos
   arts. 467 e 477, indenizações com valor fixo.
-- FGTS + 40%, honorários advocatícios, correção monetária e juros em fases (ex.: IPCA-E, SELIC, IPCA e taxa
+- 13º e férias de um trecho do contrato (ex.: vínculo reconhecido), com os avos calculados.
+- Horas extras com adicional da convenção (ex.: 60%).
+- FGTS com multa de 40% ou 20% (acordo), deduzindo os depósitos do extrato; honorários advocatícios, correção monetária e juros em fases (ex.: IPCA-E, SELIC, IPCA e taxa
   legal).
 
 **Fica para você completar no PJe-Calc:** cartão de ponto, faltas, férias gozadas detalhadas,
@@ -55,6 +57,8 @@ Lançamento Expresso. Nesses casos o Claude avisa o que ficou de fora.
 - Os nomes das partes precisam estar exatamente como no cadastro do PJe.
 - Indenizações com valor fixo (como dano moral) são lançadas como pagamento único, sem proporcionalizar.
   Confira a data de arbitramento (Súmula 439 do TST) no PDF.
+- Antes de cada cálculo, o PJe-Calc baixa as tabelas de correção e juros do TRT do processo. O computador
+  precisa de internet nesse momento.
 - Sentenças e dados de clientes ficam no seu computador; a extensão não envia nada para fora.
 - Se o PJe-Calc for atualizado para outra versão, a extensão avisa e não preenche até ser testada nela.
 

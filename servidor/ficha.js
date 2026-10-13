@@ -65,15 +65,19 @@ export const Ficha = z.object({
     de: data.optional().describe("Início do período deferido; se omitido, o PJe-Calc usa o contrato"),
     ate: data.optional(),
     horas_por_mes: z.number().positive().optional().describe("Quantidade mensal de horas (horas extras, intervalo, adicional noturno)"),
+    adicional: z.number().positive().max(200).optional()
+      .describe("Horas extras: adicional em % quando diferente do nome da verba (ex.: 60 pela convenção coletiva)"),
     valor: reais.optional().describe("Valor fixo deferido (ex.: dano moral). Torna a verba INFORMADA"),
     reflexos: z.array(z.string()).optional()
       .describe("Reflexos deferidos, pelo começo do nome no PJe-Calc: ex. ['REPOUSO', '13º', 'FÉRIAS', 'AVISO']. Omitido: mantém o padrão do PJe-Calc"),
   })).min(1),
   fgts: z.object({
     destino: z.enum(["PAGAR", "DEPOSITAR"]).default("DEPOSITAR"),
-    multa_40: z.boolean().default(true),
+    multa: z.enum(["40", "20", "NAO"]).default("40").describe("Multa rescisória: 40% (dispensa sem justa causa), 20% (acordo, art. 484-A) ou NAO"),
     multa_467: z.boolean().default(false),
-  }).default({ destino: "DEPOSITAR", multa_40: true, multa_467: false }),
+    depositos: z.array(z.object({ data, valor: reais })).default([])
+      .describe("Depósitos de FGTS já feitos (extrato da conta vinculada), para deduzir do devido"),
+  }).default({ destino: "DEPOSITAR", multa: "40", multa_467: false, depositos: [] }),
   correcao: z.object({
     indices: z.array(z.object({ indice: z.enum(INDICES), a_partir_de: data.optional() })).min(1)
       .describe("O primeiro vale desde o início; os seguintes, a partir da data indicada"),
@@ -83,13 +87,16 @@ export const Ficha = z.object({
   honorarios: z.array(z.object({
     devedor: z.enum(["RECLAMADO", "RECLAMANTE"]),
     percentual: z.number().positive().max(20),
-    credor: z.string().optional().describe("Nome do advogado ou da sociedade credora"),
+    credor: z.string().min(3).describe("Nome do advogado ou da sociedade credora (obrigatório no PJe-Calc)"),
   })).default([]),
   data_liquidacao: data.optional().describe("Omitido: o PJe-Calc usa o último dia do mês corrente"),
 });
 
 const dia = (s) => { const [d, m, a] = s.split("/").map(Number); return new Date(a, m - 1, d); };
 const mes = (s) => { const [m, a] = s.split("/").map(Number); return a * 12 + m - 1; };
+
+// TRT do processo, pelo número CNJ (J = 5, TR = região): "0010817-47.2026.5.15.0042" → "TRT15".
+export const regional = (f) => { const m = f.processo.numero?.match(/\.5\.(\d{2})\.\d{4}$/); return m ? `TRT${Number(m[1])}` : null; };
 
 // Regras que o PJe-Calc só acusaria na liquidação (ou nunca): devolve a lista de problemas.
 export function conferir(ficha) {
@@ -115,9 +122,11 @@ export function conferir(ficha) {
     if (v.de && v.ate && dia(v.ate) < dia(v.de)) erros.push(`${v.nome}: período invertido.`);
     if (/HORAS EXTRAS|INTERVALO|NOTURNO|IN ITINERE|SOBREAVISO/.test(v.nome) && !v.horas_por_mes && !v.valor)
       erros.push(`${v.nome}: falta a quantidade de horas por mês (ou um valor fixo).`);
+    if (v.adicional && !/^HORAS EXTRAS/.test(v.nome)) erros.push(`${v.nome}: "adicional" só vale para horas extras.`);
     if (/^INDENIZAÇÃO POR DANO|^MULTA CONVENCIONAL|^AJUDA DE CUSTO|^RESTITUIÇÃO/.test(v.nome) && v.valor === undefined)
       erros.push(`${v.nome}: falta o valor deferido.`);
   }
+  if (!regional(f)) erros.push("Informe o número CNJ do processo: dele sai o TRT cujas tabelas de correção e juros o PJe-Calc vai usar.");
   const nomes = f.verbas.map((v) => v.nome);
   if (new Set(nomes).size !== nomes.length) erros.push("Verba repetida: o Lançamento Expresso aceita cada verba uma vez.");
   if (f.correcao) {

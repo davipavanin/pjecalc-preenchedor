@@ -32,11 +32,19 @@ Nunca invente nome, CPF, data, salário, percentual, índice ou quantidade de ho
   proporcionalizar; avise o advogado para conferir no PDF a data de arbitramento (Súmula 439 do TST).
 - **Correção e juros:** siga o que a sentença ou o acórdão fixou (ex.: IPCA-E e SELIC conforme ADC 58/59, IPCA e
   taxa legal após a Lei 14.905/2024). Se a decisão for omissa, pergunte ao advogado; não escolha sozinho.
-- **Honorários:** percentual, devedor e credor da decisão.
+- **Horas extras:** se o adicional não for 50% ou 100% (ex.: 60% da convenção coletiva), use a verba
+  "HORAS EXTRAS 50%" com `adicional: 60`; ela sai renomeada "HORAS EXTRAS 60%".
+- **13º e férias de período parcial** (ex.: vínculo reconhecido só num trecho): informe `de` e `ate` do trecho.
+  A ferramenta calcula os avos (fração de 15 dias ou mais) e ajusta as ocorrências.
+- **FGTS:** `multa` 40 (dispensa sem justa causa), 20 (acordo, art. 484-A) ou NAO. Depósitos já feitos, com data e
+  valor do extrato, vão em `depositos` para serem deduzidos.
+- **Honorários:** percentual, devedor e **credor** (nome do advogado ou da sociedade; o PJe-Calc exige).
+- **Número CNJ é obrigatório:** dele sai o TRT cujas tabelas de correção e juros o PJe-Calc baixa antes de
+  calcular (precisa de internet).
 
 Junte as perguntas que faltarem numa mensagem só, curta, e espere a resposta.
 
-**Fora da V1:** verbas que não estão no Lançamento Expresso, cartão de ponto, faltas, férias gozadas
+**Fora da V1:** desconto de multa do FGTS já paga, verbas que não estão no Lançamento Expresso, cartão de ponto, faltas, férias gozadas
 detalhadas, salário-família, seguro-desemprego, pensão, previdência privada e custas. Nesses casos, preencha
 o que a V1 cobre, avise o que ficou de fora e oriente o advogado a completar no PJe-Calc e depois pedir
 `liquidar_e_exportar` com o número do cálculo.

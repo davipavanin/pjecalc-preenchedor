@@ -7,7 +7,7 @@ import * as z from "zod/v4";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { Ficha, conferir } from "./ficha.js";
+import { Ficha, conferir, regional } from "./ficha.js";
 import { verificar, abrirNavegador, abrirCalculo, preencher, liquidar, exportarPJC, imprimirPDF, brl } from "./robo.js";
 
 const PASTA = process.env.PJECALC_SAIDA || path.join(os.homedir(), "Documents", "PJe-Calc Preenchedor");
@@ -41,8 +41,9 @@ function resumo(f) {
     `Processo ${f.processo.numero ?? "(sem número)"}: ${f.processo.reclamante.nome} x ${f.processo.reclamada.nome}.`,
     `Contrato ${c.admissao} a ${c.demissao ?? "(vigente)"}, ${c.municipio}/${c.estado}, ajuizamento ${c.ajuizamento}${c.prescricao_quinquenal ? ", com prescrição quinquenal" : ""}.`,
     `Salários: ${f.salarios.map((s) => `${s.de}–${s.ate} R$ ${brl(s.valor)}`).join("; ")}.`,
-    `Verbas: ${f.verbas.map((v) => v.nome + (v.valor !== undefined ? ` (R$ ${brl(v.valor)})` : "") + (v.horas_por_mes ? ` (${v.horas_por_mes} h/mês)` : "") + (v.reflexos ? ` [reflexos: ${v.reflexos.join(", ")}]` : "")).join("; ")}.`,
-    `FGTS: ${f.fgts.destino === "PAGAR" ? "pagar" : "depositar"}${f.fgts.multa_40 ? " + 40%" : ""}${f.fgts.multa_467 ? " + art. 467" : ""}.`,
+    `Verbas: ${f.verbas.map((v) => v.nome + (v.valor !== undefined ? ` (R$ ${brl(v.valor)})` : "") + (v.horas_por_mes ? ` (${v.horas_por_mes} h/mês)` : "") + (v.adicional ? ` (adicional de ${v.adicional}%)` : "") + (v.de || v.ate ? ` [${v.de ?? "início"} a ${v.ate ?? "fim"}]` : "") + (v.reflexos ? ` [reflexos: ${v.reflexos.join(", ")}]` : "")).join("; ")}.`,
+    `FGTS: ${f.fgts.destino === "PAGAR" ? "pagar" : "depositar"}${f.fgts.multa !== "NAO" ? ` + multa de ${f.fgts.multa}%` : ", sem multa"}${f.fgts.multa_467 ? " + art. 467" : ""}${f.fgts.depositos.length ? `, deduzindo R$ ${brl(f.fgts.depositos.reduce((t, d) => t + d.valor, 0))} já depositados` : ""}.`,
+    `Tabelas de correção e juros: ${regional(f)} (atualizadas antes de calcular).`,
     f.correcao ? `Correção: ${f.correcao.indices.map((x) => x.indice + (x.a_partir_de ? ` desde ${x.a_partir_de}` : "")).join(" → ")}; juros: ${f.correcao.juros.map((x) => x.tabela + (x.a_partir_de ? ` desde ${x.a_partir_de}` : "")).join(" → ")}.` : "Correção e juros: padrão do PJe-Calc.",
     f.honorarios.length ? `Honorários: ${f.honorarios.map((h) => `${h.percentual}% pelo ${h.devedor.toLowerCase()}`).join("; ")}.` : "Sem honorários.",
   ].join("\n");

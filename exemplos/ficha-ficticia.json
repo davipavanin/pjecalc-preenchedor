@@ -28,7 +28,7 @@
     { "nome": "HORAS EXTRAS 50%", "horas_por_mes": 20, "reflexos": ["REPOUSO", "13º", "FÉRIAS", "AVISO"] },
     { "nome": "INDENIZAÇÃO POR DANO MORAL", "valor": 5000 }
   ],
-  "fgts": { "destino": "DEPOSITAR", "multa_40": true, "multa_467": false },
+  "fgts": { "destino": "DEPOSITAR", "multa": "40", "multa_467": false },
   "correcao": {
     "indices": [
       { "indice": "IPCAE" },
